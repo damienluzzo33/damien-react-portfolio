@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
 }
 
 export default function Contact() {
 	const [ userEmail, setUserEmail ] = useState('');
 	const [ userName, setUserName ] = useState('');
 	const [ message, setMessage ] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+	const [ errorMessage, setErrorMessage ] = useState('');
 
 	const handleInputChange = (event) => {
 		// Getting the value and name of the input which triggered the change
@@ -29,8 +29,8 @@ export default function Contact() {
 	const handleFormSubmit = (event) => {
 		event.preventDefault();
 
-		if (!validateEmail(userEmail) || !userName) {
-			setErrorMessage('Email or username is invalid');
+		if (!validateEmail(userEmail)) {
+			setErrorMessage('Email is invalid');
 			return;
 		}
 
@@ -38,45 +38,59 @@ export default function Contact() {
 			setErrorMessage(`You need to include your name!`);
 			return;
 		}
-        if (!message) {
-            setErrorMessage("You can't leave your message blank!")
-        }
+
+		if (!message) {
+			setErrorMessage("You can't leave your message blank!");
+            return;
+		}
 
 		setUserName('');
 		setUserEmail('');
 		setMessage('');
+		setErrorMessage('');
 	};
 
 	return (
-		<section id="contact" class="contact">
-			<h2 class="contact-title">Contact</h2>
+		<section id="contact" className="contact">
+			<h2 className="contact-title">Contact</h2>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
-                <div>
-                <label>Email </label>
-				<input
-					value={userEmail}
-					name="userEmail"
-					onChange={handleInputChange}
-					type="email"
-					placeholder="Email"
-				/>
-                </div>
-                <div>
-                <label>Name </label>
-				<input value={userName} name="userName" onChange={handleInputChange} type="text" placeholder="Name" />
-                </div>
-                <div>
-                <label>Message </label>
-				<textarea
-					value={message}
-					name="message"
-					onChange={handleInputChange}
-					placeholder="Type your message here..."
-				/>
-                </div>
+				<div>
+					<label>Email </label>
+					<input
+						value={userEmail}
+						name="userEmail"
+						onChange={handleInputChange}
+						type="email"
+						placeholder="Email"
+					/>
+				</div>
+				<div>
+					<label>Name </label>
+					<input
+						value={userName}
+						name="userName"
+						onChange={handleInputChange}
+						type="text"
+						placeholder="Name"
+					/>
+				</div>
+				<div>
+					<label>Message </label>
+					<textarea
+						value={message}
+						name="message"
+						onChange={handleInputChange}
+						placeholder="Type your message here..."
+					/>
+				</div>
 				<button type="submit">Submit</button>
 			</form>
-			<address class="contact-links">
+			{errorMessage && (
+				<div>
+					<p className="errorText">{errorMessage}</p>
+				</div>
+			)}
+			<address className="contact-links">
 				<a href="mailto:damienluzzo33@gmail.com" target="_blank" rel="noreferrer">
 					Email
 				</a>

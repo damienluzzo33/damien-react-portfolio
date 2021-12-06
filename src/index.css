@@ -346,6 +346,13 @@ Center article headings using flex. Do flex-direction column to make sure headin
   margin-right: 15px;
 }
 
+.errorText {
+  margin-bottom: 50px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px red, -2px -2px 2px red, 2px -2px 2px red, -2px 2px 2px red;
+}
+
 /*  Create separation from bottom of section so all content fits comfortably. Change font style to normal to get rid of address element styles */
 .contact-links {
   margin-bottom: 50px;
