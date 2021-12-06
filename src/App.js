@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './index.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 
 function App() {
-	const [ page, setPage ] = useState('home');
+	const [ page, setPage ] = useState('Home');
 
 	const render = (page) => {
 		if (page === 'Home') {
@@ -28,7 +28,7 @@ function App() {
 	return (
 		<main>
 			<Navbar currentPage={page} handlePageChange={updatePage} />
-			{() => render()}
+			{render(page)}
 			<Footer />
 		</main>
 	);

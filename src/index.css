@@ -1,13 +1,446 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*  CSS designed with mobile-first approach */
+
+/*  Create variables for webpage color scheme */
+:root {
+  --dark-red: rgb(158, 0, 0);
+  --dark-blue: rgb(0, 74, 158);
+  --light-blue: rgb(0, 153, 255);
+  --off-white: rgba(250, 250, 250, 0.979);
+  --dark: rgba(0, 0, 0, 0.925);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*  Set font family for entire webpage */
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  scroll-behavior: smooth;
+}
+
+/*  Set body width to 100% with black background color */
+body {
+  width: 100%;
+  background-color: var(--dark);
+}
+
+/*  Set header to flex and put space between logo and navbar. Make header fixed so that it stays at the top of the page as you scroll down. Align items to center vertically.
+*/
+.navbar {
+  height: 100px;
+  background-color: var(--dark);
+  padding: 10px;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: space-between; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/*  Make logo white and twice as big as root font-size */
+.logo {
+  font-size: 2rem;
+  color: var(--off-white);
+  margin-left: 5px;
+}
+
+/*  Set text-decoration to none to remove underline */
+.logo a {
+  text-decoration: none;
+  color: var(--off-white);
+}
+
+/*  Display nav-link list items in a row */
+.navbar ul {
+  /* display: flex; */
+}
+
+/*  Create separation between nav-links  */
+.navlink {
+  /* margin-right: 15px; */
+}
+
+/*  Set text-decoration to none to remove underline create a slight transitioning animation when the cursor hovers over each link. Make text white and bold and slightly bigger than base font-size.
+*/
+.navlink a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--off-white);
+  text-shadow: none;
+  transition: all 0.2s ease-out;
+}
+
+/* Slightly bigger with text shadow when we hover over links */
+.navlink a:hover {
+  font-size: 1.22rem;
+  text-shadow: 2px 2px 2px rgb(36, 36, 36);
+}
+
+/*  Make sure main element is full width of the body element */
+main {
+  width: 100%;
+}
+
+/*  Set banner height to be full height of viewport. Give banner an image that covers the area, is centered, and does not repeat. Set display to flex so we can center the article in our banner class.
+*/
+#home {
+  background-image: url("./images/land1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/*  Make sure article is in front of the banner background with z-index.
+Center article headings using flex. Do flex-direction column to make sure headings stack on top of one another.
+*/
+#home article {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Make banner h2 white with a huge font size and some bottom padding */
+#home h2 {
+  color: var(--off-white);
+  font-size: 3.5rem;
+  margin-bottom: -5px;
+  text-shadow: 2px 2px 3px black;
+  font-weight: bold;
+}
+
+/*  Make banner h3 white with font-size that makes width of both the h2 and h3 content match */
+#home h3 {
+  color: var(--off-white);
+  font-size: 2rem;
+  text-shadow: 2px 2px 3px black;
+  font-weight: bold;
+}
+
+/*  Make about section the full width of the main element with a background gradient that goes from blue to black in a diagonal direction. Make color of all text inside section to be white and display containing elements in column. Make height of section the height of the viewport. Create some margin top so that way fixed navbar does not cover title when navbar link to the section is clicked. */
+.about {
+  width: 100%;
+  background: linear-gradient(to left top, var(--dark-blue) 10%, var(--dark));
+  color: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  align-items: center;
+  height: auto;
+}
+
+/*  Make article within the about section display flex as a column so that img and p elements stack on top of one another. Add some padding to create separation from page border and the article. */
+.about article {
+  padding: 20px 15px 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  Make image span the width of the article parent. Curve the edges with border radius and create some separation between img and p tags. */
+#profilePic {
+  background-image: url("./images/20181209_223633.jpg");
+  height: 500px;
+  /* margin-right: 20px; */
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/*  Make line height taller so that more spacing is created between lines of text. Add a little bit more separation between img and p. */
+.about article p {
+  margin-top: 20px;
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+
+/*  Make h2 within about section double root font size and create some separation between h2 and article. */
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/*  Create padding for the projects section and stack project boxes inside in a flex column aligned horizontally to the center of the page */
+.projects {
+  padding: 20px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  Make h2 within about section double root font size and create some separation between white colored h2 and the projects below it. Create some margin top so that way fixed navbar does not cover title when navbar link to the section is clicked. */
+.projects-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  color: var(--off-white);
+}
+
+/*  For even numbered projects (2 and 4), make it so the contents go to the right side of the figure with some padding on the right when screen size is mobile. */
+.projects figure:nth-of-type(even) {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 35px;
+}
+
+/*  For odd numbered projects (1 and 3), make it so the contents go to the left side of the figure with some padding on the left when screen size is mobile.*/
+.projects figure:nth-of-type(odd) {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 27px;
+}
+
+/*  Make main project taller than the other three sub projects by an extra 100px. Add preview image as a background image of the figure. Add border to make it look cool. Add background image for first . Add transition for filter when we hover over it. */
+.main-project {
+  height: 500px;
+  border: solid 2px var(--off-white);
+  width: 100%;
+  background-image: url("./images/project_2_giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  filter: grayscale(60%);
+  transition: filter 0.5s linear;
+}
+
+/*  Make sub projects 150px tall so you can get a decent preview of the background image. Add border to make it look cool. Add transition for filter when we hover over it. */
+.sub-project {
+  height: 200px;
+  border: solid 2px var(--off-white);
+  width: 100%;
+  filter: grayscale(50%);
+  transition: filter 0.5s linear;
+}
+
+/*  Add background image for second project */
+.projects figure:nth-of-type(2) {
+  background-image: url("./images/react-color-palette-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/*  Add background image for third project */
+.projects figure:nth-of-type(3) {
+  background-image: url("./images/68747470733a2f2f692e696d6775722e636f6d2f796d32357031432e706e67.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/*  Add background image for fourth project */
+.projects figure:nth-of-type(4) {
+  background-image: url("./images/screenshot_desktop_view.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/*  Create hover effect when mouse hovers over the main project and sub project figures to get rid of greyscale. */
+.main-project:hover, .sub-project:hover {
+  filter: grayscale(0%);
+}
+
+/*  Make main heading absolute in position so that we can center it to the middle of the vertical axis separate from the p element */
+.main-project-header {
+  position: absolute;
+  bottom: 75px;
+  /* left: 25px; */
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--dark);
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+}
+
+/*  Make sub heading absolute in position so that we can center it to the middle of the vertical axis separate from the p element. Add padding right for the 2nd sub project header. Make font bigger and bolder and add some shadow */
+.sub-project .project-header {
+  position: absolute;
+  bottom: 75px;
+  /* right: 25px; */
+  /* padding-right: 10px; */
+  font-size: 1.75rem;
+  font-weight: bolder;
+  color: var(--dark);
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+}
+
+/*  Make p elements inside of the project figures slightly elevated from the bottom of the box */
+.projects figure p {
+  margin-bottom: 10px;
+}
+
+/*  Remove text decoration from anchor tag presets and change color to white. Make font bigger and bolder and add some shadow */
+.projects figure p a {
+  text-decoration: none;
+  color: var(--dark);
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+  margin-right: 10px;
+  /* font-size: 1.2rem; */
+  /* font-weight: 800; */
+}
+
+.material-icons {
+  font-size: 3rem !important;
+}
+
+/*  For contact section, make it flex in the column direction so that section title is on top of the address element containing links to contact information. Add background gradient same as about section and add some margin to push it further away from the projects section */
+.contact {
+  padding: 20px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left top, var(--dark-blue) 10%, var(--dark));
+  color: var(--off-white);
+  margin-top: 60px;
+}
+
+/*  Double title font size and added margin between title and links below. Create some margin top so that way fixed navbar does not cover title when navbar link to the section is clicked. */
+.contact-title {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+/*  Create separation from bottom of section so all content fits comfortably. Change font style to normal to get rid of address element styles */
+.contact-links {
+  margin-bottom: 50px;
+  font-style: normal;
+}
+
+/*  Take away text decoration so that underline disappears and change color to white so that links are not blue. Add margin on left and right to create spacing between links. */
+.contact-links a {
+  text-decoration: none;
+  margin: 0 2vw 0 2vw;
+  color: var(--off-white);
+}
+
+/*  When cursor hovers over contact links, add underline for a better user experience */
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/*  Make footer 200px tall and turn into flex with content within it justified and aligned to the center of element */
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  Increase font size slightly so that text is more legible and change color to white */
+footer p {
+  color: var(--off-white);
+  font-size: 1.2rem;
+}
+
+/*  Make website responsive when screen viewport width is larger than 700px */
+@media screen and (min-width: 700px) {
+
+  /*  Make height smaller because content is very minimal in height when screen is larger */
+  .about {
+      height: auto;
+  }
+
+  /*  Change flex direction to row for about section article and add space around the contained elements. Add padding. */
+  .about article {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px 30px 50px 30px;
+  }
+
+  /*  Add flex shorthand to make image responsive as screen changes size. Add extra margin to right for more separation. */
+  #profilePic {
+      flex: 1 1 100px;
+      max-width: 400px;
+      max-height: 400px;
+      margin-right: 35px;
+  }
+
+  /*  Make p element flush to the top of the article element and add flex shorthand for responsive resizing. */
+  .about article p {
+      margin-top: 0;
+      width: 50%;
+      flex: 1 1 300px;
+  }
+
+  /*  Make flex direction for projects section into a row so that bottom three project figures stack side by side on the same line under main project. Justify content to center so that h2 is centered. */
+  .projects {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .projects-title {
+      width: 100%;
+  }
+
+  .main-project {
+      width: 90% ;
+      margin: 0 20px 10px 20px;
+  }
+  
+  /*  Change width of sub projects to 33.3% so they can fit on the same line. */
+  .sub-project {
+      width: 30%;
+      margin: 10px 0 0 0;
+  }
+
+  /*  Make project header h3s all aligned to the left side of the figure its contained in by setting left to 25px */
+  .sub-project .project-header {
+      left: 25px;
+  }
+
+  /*  Change position to absolute and give each p same position in their respective figure element parents */
+  .projects figure p {
+      position: absolute;
+      left: 25px;
+      bottom: 10px;
+  }
+}
+
+/*  When screen is more than 965px, increase p element font size so that it fills up more space in the about section's article element. It looks better this way.  */
+@media screen and (min-width: 965px) {
+  .about article p {
+      font-size: 1.25rem;
+  }
+}
+
+/*  When screen is more than 1185px, increase p element font size so that it fills up even more space in the about section's article element. It looks way better this way. */
+@media screen and (min-width: 1185px) {
+  .about article p {
+      font-size: 1.3rem;
+  }
+}
+
+/*  OLDER PLACEHOLDER BACKGROUND FOR PROJECT FIGURES
+background: linear-gradient( 
+  315deg,
+  var(--dark-blue) 0%,
+  black 100%
+); */
+
+
+.sidenav {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/21/Mandel_zoom_00_mandelbrot_set.jpg");
+  background-size:initial;
+  background-position: center;
+}
+
+.sidenav a {
+  color: var(--off-white) !important;
+  font-size: 24px !important;
+  padding-left: 10px !important;
 }

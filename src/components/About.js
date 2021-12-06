@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function About() {
 	return (
-		<section id="about" class="about">
+		<section id="about" className="about">
 			<h2>About Me</h2>
 			<article>
-				<img src="./assets/images/20181209_223633.jpg" alt="Damien Luzzo with his cats Willow and Oz" />
+				<div id="profilePic"></div>
 				<p>
 					Damien is a software engineer and web developer with a passion for artificial intelligence, UX/UI
 					design, site accessibility, and performance optimization. He graduated from the University of
