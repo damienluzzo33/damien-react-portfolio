@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default function Footer() {
-    return (
-        <div>
-            Footer Page
-        </div>
-    )
+	return (
+		<footer>
+			<p>&#169;2021 Damien Luzzo</p>
+		</footer>
+	);
 }

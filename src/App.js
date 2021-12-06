@@ -9,17 +9,16 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 
 function App() {
-
 	const [ page, setPage ] = useState('home');
 
 	const render = (page) => {
-		if (page === 'home') {
+		if (page === 'Home') {
 			return <Home />;
-		} else if (page === 'about') {
+		} else if (page === 'About') {
 			return <About />;
-		} else if (page === 'projects') {
+		} else if (page === 'Projects') {
 			return <Projects />;
-		} else if (page === 'contact') {
+		} else if (page === 'Contact') {
 			return <Contact />;
 		}
 	};
@@ -27,11 +26,11 @@ function App() {
 	const updatePage = (page) => setPage(page);
 
 	return (
-		<div className="App">
+		<main>
 			<Navbar currentPage={page} handlePageChange={updatePage} />
 			{() => render()}
 			<Footer />
-		</div>
+		</main>
 	);
 }
 
