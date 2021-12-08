@@ -2,7 +2,7 @@
 
 Who is Damien Luzzo? Click the link below to find out.
 
-[Damien Luzzo's Awesome Portfolio](https://damienluzzo33.github.io/Damien-Portfolio/)
+[Damien Luzzo's Awesome Portfolio On Netlify](https://61b05087eb75790007426955--trusting-visvesvaraya-554a02.netlify.app/)
 
 ## Current Features
 
