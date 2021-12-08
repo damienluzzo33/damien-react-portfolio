@@ -1,4 +1,7 @@
 import React from 'react';
+import CodeIcon from '@mui/icons-material/Code';
+import LinkIcon from '@mui/icons-material/Link';
+
 
 export default function Projects() {
 	return (
@@ -8,10 +11,10 @@ export default function Projects() {
 				<h3 className="main-project-header">Grouper App</h3>
 				<p>
 					<a href="https://github.com/damienluzzo33/Grouper-App" rel="noopener noreferrer" target="_blank">
-						<i className="large material-icons">code</i>
-					</a>{' '}
+						<CodeIcon className="material" fontSize="large" />
+					</a>
 					<a href="https://the-grouper-app.herokuapp.com/" rel="noopener noreferrer" target="_blank">
-						<i className="large material-icons">link</i>
+                        <LinkIcon className="material" fontSize="large" />
 					</a>
 				</p>
 			</figure>
@@ -22,9 +25,8 @@ export default function Projects() {
 						href="https://github.com/damienluzzo33/color-palette-maker"
 						rel="noopener noreferrer"
 						target="_blank"
-					>
-						{' '}
-						<i className="large material-icons">code</i>
+					>{' '}
+						<CodeIcon className="material" fontSize="large" />
 					</a>
 				</p>
 			</figure>
@@ -33,10 +35,10 @@ export default function Projects() {
 				<p>
 					<a href="https://github.com/damienluzzo33/Project-1" rel="noopener noreferrer" target="_blank">
 						{' '}
-						<i className="large material-icons">code</i>
+						<CodeIcon className="material" fontSize="large" />
 					</a>{' '}
 					<a href="https://damienluzzo33.github.io/Project-1/" rel="noopener noreferrer" target="_blank">
-						<i className="large material-icons">link</i>
+                        <LinkIcon className="material" fontSize="large" />
 					</a>
 				</p>
 			</figure>
@@ -44,11 +46,10 @@ export default function Projects() {
 				<h3 className="project-header">Git Bloggin</h3>
 				<p>
 					<a href="https://github.com/damienluzzo33/Git-Bloggin" rel="noopener noreferrer" target="_blank">
-						{' '}
-						<i className="large material-icons">code</i>
-					</a>{' '}
+						<CodeIcon className="material" fontSize="large" />
+					</a>
 					<a href="https://git-bloggin.herokuapp.com/" rel="noopener noreferrer" target="_blank">
-						<i className="large material-icons">link</i>
+                        <LinkIcon className="material" fontSize="large" />
 					</a>
 				</p>
 			</figure>

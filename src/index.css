@@ -24,16 +24,16 @@ body {
 /*  Set header to flex and put space between logo and navbar. Make header fixed so that it stays at the top of the page as you scroll down. Align items to center vertically.
 */
 .navbar {
-  height: 100px;
+  height: 80px;
   background-color: var(--dark);
-  padding: 10px;
+  padding: 30px;
   /* display: flex; */
   /* align-items: center;
   justify-content: space-between; */
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 10;
+  align-content: center;
 }
 
 /*  Make logo white and twice as big as root font-size */
@@ -50,18 +50,20 @@ body {
 }
 
 /*  Display nav-link list items in a row */
-.navbar ul {
-  /* display: flex; */
+.navbarLinks {
+  display: flex;
+  float: right;
+  align-content: center;
 }
 
 /*  Create separation between nav-links  */
-.navlink {
-  /* margin-right: 15px; */
+.navbarItem {
+  margin-right: 25px;
 }
 
 /*  Set text-decoration to none to remove underline create a slight transitioning animation when the cursor hovers over each link. Make text white and bold and slightly bigger than base font-size.
 */
-.navlink a {
+.navbarLink {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -259,8 +261,8 @@ Center article headings using flex. Do flex-direction column to make sure headin
   /* left: 25px; */
   font-size: 2rem;
   font-weight: bolder;
-  color: var(--dark);
-  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+  color: var(--off-white);
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
 }
 
 /*  Make sub heading absolute in position so that we can center it to the middle of the vertical axis separate from the p element. Add padding right for the 2nd sub project header. Make font bigger and bolder and add some shadow */
@@ -271,27 +273,28 @@ Center article headings using flex. Do flex-direction column to make sure headin
   /* padding-right: 10px; */
   font-size: 1.75rem;
   font-weight: bolder;
-  color: var(--dark);
-  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+  color: var(--off-white);
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
 }
 
 /*  Make p elements inside of the project figures slightly elevated from the bottom of the box */
 .projects figure p {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 /*  Remove text decoration from anchor tag presets and change color to white. Make font bigger and bolder and add some shadow */
 .projects figure p a {
   text-decoration: none;
   color: var(--dark);
-  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
-  margin-right: 10px;
+  margin-right: 15px;
   /* font-size: 1.2rem; */
   /* font-weight: 800; */
 }
 
-.material-icons {
-  font-size: 3rem !important;
+.material {
+  font-size: 2.5rem !important;
+  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white important!;
+  
 }
 
 /*  For contact section, make it flex in the column direction so that section title is on top of the address element containing links to contact information. Add background gradient same as about section and add some margin to push it further away from the projects section */
@@ -303,7 +306,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
   justify-content: center;
   background: linear-gradient(to left top, var(--dark-blue) 10%, var(--dark));
   color: var(--off-white);
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 /*  Double title font size and added margin between title and links below. Create some margin top so that way fixed navbar does not cover title when navbar link to the section is clicked. */

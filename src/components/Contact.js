@@ -26,6 +26,27 @@ export default function Contact() {
 		}
 	};
 
+    const onBlurFunction = (event) => {
+        event.preventDefault();
+
+        if (!validateEmail(userEmail)) {
+			setErrorMessage('Email is invalid');
+			return;
+		}
+
+		if (!userName) {
+			setErrorMessage(`You need to include your name!`);
+			return;
+		}
+
+		if (!message) {
+			setErrorMessage("You can't leave your message blank!");
+            return;
+		}
+    }
+
+
+
 	const handleFormSubmit = (event) => {
 		event.preventDefault();
 
@@ -62,6 +83,7 @@ export default function Contact() {
 						onChange={handleInputChange}
 						type="email"
 						placeholder="Email"
+                        onBlur={onBlurFunction}
 					/>
 				</div>
 				<div>
@@ -72,6 +94,7 @@ export default function Contact() {
 						onChange={handleInputChange}
 						type="text"
 						placeholder="Name"
+                        onBlur={onBlurFunction}
 					/>
 				</div>
 				<div>
@@ -81,6 +104,7 @@ export default function Contact() {
 						name="message"
 						onChange={handleInputChange}
 						placeholder="Type your message here..."
+                        onBlur={onBlurFunction}
 					/>
 				</div>
 				<button type="submit">Submit</button>
