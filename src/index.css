@@ -277,10 +277,10 @@ Center article headings using flex. Do flex-direction column to make sure headin
 /*  Make sub heading absolute in position so that we can center it to the middle of the vertical axis separate from the p element. Add padding right for the 2nd sub project header. Make font bigger and bolder and add some shadow */
 .sub-project .project-header {
   position: absolute;
-  bottom: 110px;
+  top: 25px;
   /* right: 25px; */
   /* padding-right: 10px; */
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: bolder;
   color: var(--off-white);
   text-shadow: 1px 1px 8px var(--dark-blue), -1px -1px 8px var(--dark-blue), 1px -1px 8px var(--dark-blue), -1px 1px 8px var(--dark-blue);
@@ -295,6 +295,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
 
 .project-links {
   text-align: start;
+  display: flex;
 }
 
 .projects figure p ul {
@@ -302,7 +303,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
   display: flex;
   margin-top: 11px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   flex-wrap: wrap;
 }
 
@@ -328,6 +329,24 @@ Center article headings using flex. Do flex-direction column to make sure headin
   box-shadow: 2px 2px 12px var(--dark-blue), -2px -2px 12px var(--dark-blue), 2px -2px 12px var(--dark-blue), -2px 2px 12px var(--dark-blue) !important;
   background-color: rgba(133, 210, 255, 0.657);
   border-radius: 50%;
+}
+
+.material:hover {
+  cursor: pointer;
+}
+
+.modalDiv {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.modalTitle {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.modalText {
+  font-size: 18px;
 }
 
 /*  For contact section, make it flex in the column direction so that section title is on top of the address element containing links to contact information. Add background gradient same as about section and add some margin to push it further away from the projects section */
