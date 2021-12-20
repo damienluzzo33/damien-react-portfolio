@@ -25,7 +25,9 @@ export default function Projects() {
 		setOpen(true);
 	}
 
-	const handleClose = () => setOpen(false);
+	const handleClose = () => {
+		setOpen(false)
+	};
 
 	const style = {
 		position: 'absolute',

@@ -36,6 +36,43 @@ body {
   align-content: center;
 }
 
+@media screen and (max-width: 500px) {
+  .sidebar {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/21/Mandel_zoom_00_mandelbrot_set.jpg");
+    background-size: initial;
+    background-position: center;
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+  
+  .sidebarLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sidebarItem {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidebarLink {
+    color: var(--off-white) !important;
+    font-size: 24px !important;
+  }
+  
+  .sidebarLink:hover {
+    font-size: 1.22rem;
+    text-shadow: 2px 2px 2px rgb(36, 36, 36);
+  }
+}
+
 /*  Make logo white and twice as big as root font-size */
 .logo {
   font-size: 2rem;
@@ -323,6 +360,19 @@ Center article headings using flex. Do flex-direction column to make sure headin
   /* font-weight: 800; */
 }
 
+.materialMenu {
+  display: none;
+  font-size: 4rem !important;
+  color: var(--off-white);
+  box-shadow: 2px 2px 12px var(--dark-blue), -2px -2px 12px var(--dark-blue), 2px -2px 12px var(--dark-blue), -2px 2px 12px var(--dark-blue) !important;
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+}
+
+.materialMenu:hover {
+  cursor: pointer;
+}
+
 .material {
   font-size: 2.5rem !important;
   color: var(--dark);
@@ -525,22 +575,19 @@ footer p {
   }
 }
 
+@media screen and (min-width: 500px) {
+  .materialMenu {
+    display:block
+  }
+
+  .navbarLinks {
+    display: none;
+  }
+}
+
 /*  OLDER PLACEHOLDER BACKGROUND FOR PROJECT FIGURES
 background: linear-gradient( 
   315deg,
   var(--dark-blue) 0%,
   black 100%
 ); */
-
-
-.sidenav {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/21/Mandel_zoom_00_mandelbrot_set.jpg");
-  background-size:initial;
-  background-position: center;
-}
-
-.sidenav a {
-  color: var(--off-white) !important;
-  font-size: 24px !important;
-  padding-left: 10px !important;
-}
