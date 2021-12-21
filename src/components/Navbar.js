@@ -1,16 +1,47 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 export default function NavTabs(props) {
 	const { currentPage, handlePageChange } = props;
 
-	//* set up ability to run an onClick event when menuIcon is clicked so that we can pop the sidebar in and out (need exit button or added logic in listener for that)
+	const [open, setOpen] = React.useState(false);
+
+	const handleSidebarOpen = () => {
+		setOpen(true);
+	}
+
+	const handleSidebarClose = () => {
+		setOpen(false);
+	}
+
+	function handleSidebar(event) {
+		const clicker = event.target.id;
+		console.log(clicker);
+		if (clicker === "homePage") {
+			handleSidebarClose();
+			handlePageChange('Home');
+		} else if (clicker === "aboutPage") {
+			handleSidebarClose();
+			handlePageChange('About');
+		} else if (clicker === "contactPage") {
+			handleSidebarClose();
+			handlePageChange('Contact');
+		} else if (clicker === 'projectsPage') {
+			handleSidebarClose();
+			handlePageChange('Projects');
+		} else {
+			handleSidebarClose();
+		}
+	}
 
 	return (
 		<React.Fragment>
 		<div className="navbar">
 			{/* Hamburger Icon */}
 			<MenuIcon 
+				id="clickedIcon"
+				onClick={handleSidebarOpen}
 				className="materialMenu" 
 				fontSize="large" 
 			/>
@@ -54,12 +85,18 @@ export default function NavTabs(props) {
 				</li>
 			</ul>
 		</div>
-		<div className="sidebar">
+		<div style={{ display: open ? "flex" : "none" }} className="sidebar">
+			<HighlightOffIcon 
+				onClick={handleSidebarClose}
+				className="materialMenu" 
+				fontSize="large" 
+			/>
 			<ul className="sidebarLinks">
 				<li className="sidebarItem">
 					<a
 						href="#Home"
-						onClick={() => handlePageChange('Home')}
+						id="homePage"
+						onClick={handleSidebar}
 						className={currentPage === 'Home' ? 'sidebarLink active' : 'sidebarLink'}
 					>
 						Home
@@ -68,7 +105,8 @@ export default function NavTabs(props) {
 				<li className="sidebarItem">
 					<a
 						href="#About"
-						onClick={() => handlePageChange('About')}
+						id="aboutPage"
+						onClick={handleSidebar}
 						className={currentPage === 'About' ? 'sidebarLink active' : 'sidebarLink'}
 					>
 						About
@@ -77,7 +115,8 @@ export default function NavTabs(props) {
 				<li className="sidebarItem">
 					<a
 						href="#Projects"
-						onClick={() => handlePageChange('Projects')}
+						id="projectsPage"
+						onClick={handleSidebar}
 						className={currentPage === 'Projects' ? 'sidebarLink active' : 'sidebarLink'}
 					>
 						Projects
@@ -86,7 +125,8 @@ export default function NavTabs(props) {
 				<li className="sidebarItem">
 					<a
 						href="#Contact"
-						onClick={() => handlePageChange('Contact')}
+						id="contactPage"
+						onClick={handleSidebar}
 						className={currentPage === 'Contact' ? 'sidebarLink active' : 'sidebarLink'}
 					>
 						Contact
