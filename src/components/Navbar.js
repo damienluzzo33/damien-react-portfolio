@@ -37,103 +37,109 @@ export default function NavTabs(props) {
 
 	return (
 		<React.Fragment>
-		<div className="navbar">
-			{/* Hamburger Icon */}
-			<MenuIcon 
-				id="clickedIcon"
-				onClick={handleSidebarOpen}
-				className="materialMenu" 
-				fontSize="large" 
-			/>
-			<div className="navbarLogo" />
-			<ul className="navbarLinks">
-				<li className="navbarItem">
-					<a
-						href="#Home"
-						onClick={() => handlePageChange('Home')}
-						className={currentPage === 'Home' ? 'navbarLink active' : 'navbarLink'}
-					>
-						Home
-					</a>
-				</li>
-				<li className="navbarItem">
-					<a
-						href="#About"
-						onClick={() => handlePageChange('About')}
-						className={currentPage === 'About' ? 'navbarLink active' : 'navbarLink'}
-					>
-						About
-					</a>
-				</li>
-				<li className="navbarItem">
-					<a
-						href="#Projects"
-						onClick={() => handlePageChange('Projects')}
-						className={currentPage === 'Projects' ? 'navbarLink active' : 'navbarLink'}
-					>
-						Projects
-					</a>
-				</li>
-				<li className="navbarItem">
-					<a
-						href="#Contact"
-						onClick={() => handlePageChange('Contact')}
-						className={currentPage === 'Contact' ? 'navbarLink active' : 'navbarLink'}
-					>
-						Contact
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div style={{ display: open ? "flex" : "none" }} className="sidebar">
-			<HighlightOffIcon 
-				onClick={handleSidebarClose}
-				className="materialMenu" 
-				fontSize="large" 
-			/>
-			<ul className="sidebarLinks">
-				<li className="sidebarItem">
-					<a
-						href="#Home"
-						id="homePage"
-						onClick={handleSidebar}
-						className={currentPage === 'Home' ? 'sidebarLink active' : 'sidebarLink'}
-					>
-						Home
-					</a>
-				</li>
-				<li className="sidebarItem">
-					<a
-						href="#About"
-						id="aboutPage"
-						onClick={handleSidebar}
-						className={currentPage === 'About' ? 'sidebarLink active' : 'sidebarLink'}
-					>
-						About
-					</a>
-				</li>
-				<li className="sidebarItem">
-					<a
-						href="#Projects"
-						id="projectsPage"
-						onClick={handleSidebar}
-						className={currentPage === 'Projects' ? 'sidebarLink active' : 'sidebarLink'}
-					>
-						Projects
-					</a>
-				</li>
-				<li className="sidebarItem">
-					<a
-						href="#Contact"
-						id="contactPage"
-						onClick={handleSidebar}
-						className={currentPage === 'Contact' ? 'sidebarLink active' : 'sidebarLink'}
-					>
-						Contact
-					</a>
-				</li>
-			</ul>
-		</div>
+			<div 
+				className="navbar"
+				style={{height: open ? "0%" : "80px"}}
+			>
+				{/* Hamburger Icon */}
+				<MenuIcon 
+					id="clickedIcon"
+					onClick={handleSidebarOpen}
+					className="materialMenu" 
+					fontSize="large" 
+				/>
+				<div className="navbarLogo" />
+				<ul className="navbarLinks">
+					<li className="navbarItem">
+						<a
+							href="#Home"
+							onClick={() => handlePageChange('Home')}
+							className={currentPage === 'Home' ? 'navbarLink active' : 'navbarLink'}
+						>
+							Home
+						</a>
+					</li>
+					<li className="navbarItem">
+						<a
+							href="#About"
+							onClick={() => handlePageChange('About')}
+							className={currentPage === 'About' ? 'navbarLink active' : 'navbarLink'}
+						>
+							About
+						</a>
+					</li>
+					<li className="navbarItem">
+						<a
+							href="#Projects"
+							onClick={() => handlePageChange('Projects')}
+							className={currentPage === 'Projects' ? 'navbarLink active' : 'navbarLink'}
+						>
+							Projects
+						</a>
+					</li>
+					<li className="navbarItem">
+						<a
+							href="#Contact"
+							onClick={() => handlePageChange('Contact')}
+							className={currentPage === 'Contact' ? 'navbarLink active' : 'navbarLink'}
+						>
+							Contact
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div style={{ width: open ? "100%" : "0%" }} className="sidebar">
+				<div className='stickyDiv' style={{ position: open ? "fixed" : "relative", width: open ? "100vw" : "0%" }}>
+				<HighlightOffIcon 
+					style={{ display: open ? "block" : "none" }}
+					onClick={handleSidebarClose}
+					className="materialExit" 
+					fontSize="large" 
+				/>
+				<ul style={{ display: open ? "flex" : "none" }} className="sidebarLinks">
+					<li className="sidebarItem">
+						<a
+							href="#Home"
+							id="homePage"
+							onClick={handleSidebar}
+							className={currentPage === 'Home' ? 'sidebarLink active' : 'sidebarLink'}
+						>
+							Home
+						</a>
+					</li>
+					<li className="sidebarItem">
+						<a
+							href="#About"
+							id="aboutPage"
+							onClick={handleSidebar}
+							className={currentPage === 'About' ? 'sidebarLink active' : 'sidebarLink'}
+						>
+							About
+						</a>
+					</li>
+					<li className="sidebarItem">
+						<a
+							href="#Projects"
+							id="projectsPage"
+							onClick={handleSidebar}
+							className={currentPage === 'Projects' ? 'sidebarLink active' : 'sidebarLink'}
+						>
+							Projects
+						</a>
+					</li>
+					<li className="sidebarItem">
+						<a
+							href="#Contact"
+							id="contactPage"
+							onClick={handleSidebar}
+							className={currentPage === 'Contact' ? 'sidebarLink active' : 'sidebarLink'}
+						>
+							Contact
+						</a>
+					</li>
+				</ul>
+				</div>
+			</div>
 		</React.Fragment>
 	);
 }

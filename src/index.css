@@ -34,30 +34,35 @@ body {
   width: 100%;
   z-index: 10;
   align-content: center;
+  transition: height 0.1s ease-in;
 }
 
 @media screen and (max-width: 500px) {
   .sidebar {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/21/Mandel_zoom_00_mandelbrot_set.jpg");
-    background-size: initial;
-    background-position: center;
     z-index: 11;
     position: absolute;
+    /* height: 100vh; */
+    width: 0%;
+    align-items: start;
+    transition: width 0.2s ease-in;
+  }
+
+  .stickyDiv {
+    padding-top: 20px;
+    background: linear-gradient(to left top, rgb(0, 44, 95), var(--dark));
     width: 100vw;
     height: 100vh;
-    display: none;
-    flex-direction: column;
-    align-items: start;
+    transition: width 0.2s ease-in;
   }
   
   .sidebarLinks {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     margin-left: 20px;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   
   .sidebarItem {
@@ -188,6 +193,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
   display: flex;
   flex-direction: column;
   padding-top: 100px;
+  padding-bottom: 50px;
   align-items: center;
   height: auto;
 }
@@ -227,7 +233,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
 
 /*  Create padding for the projects section and stack project boxes inside in a flex column aligned horizontally to the center of the page */
 .projects {
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px 100px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,18 +349,18 @@ Center article headings using flex. Do flex-direction column to make sure headin
 }
 
 /*  Make p elements inside of the project figures slightly elevated from the bottom of the box */
-.projects figure p {
+.projects figure div {
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
 }
 
 .project-links {
-  text-align: start;
   display: flex;
+  flex-direction: row;
 }
 
-.projects figure p ul {
+.projects figure div ul {
   margin-right: 10px;
   display: flex;
   margin-top: 11px;
@@ -363,7 +369,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
   flex-wrap: wrap;
 }
 
-.projects figure p ul li {
+.projects figure div ul li {
   margin-right: 15px;
   color: white;
   text-shadow: 2px 2px 4px var(--dark-blue), -2px -2px 4px var(--dark-blue), 2px -2px 4px var(--dark-blue), -2px 2px 4px var(--dark-blue);
@@ -371,15 +377,21 @@ Center article headings using flex. Do flex-direction column to make sure headin
 }
 
 /*  Remove text decoration from anchor tag presets and change color to white. Make font bigger and bolder and add some shadow */
-.projects figure p a {
+.project-links a {
   text-decoration: none;
   color: var(--dark);
   margin-right: 15px;
-  /* font-size: 1.2rem; */
-  /* font-weight: 800; */
+  display: inline;
 }
 
-.materialMenu {
+.project-links div {
+  text-decoration: none;
+  color: var(--dark);
+  margin-right: 15px;
+  display: inline;
+}
+
+.materialMenu, .materialExit {
   font-size: 3rem !important;
   /* margin-top: 10px !important; */
   color: var(--off-white);
@@ -389,7 +401,12 @@ Center article headings using flex. Do flex-direction column to make sure headin
   margin-right: 20px;
 }
 
-.materialMenu:hover {
+.materialExit {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.materialMenu:hover, .materialExit:hover{
   cursor: pointer;
 }
 
@@ -422,6 +439,7 @@ Center article headings using flex. Do flex-direction column to make sure headin
 /*  For contact section, make it flex in the column direction so that section title is on top of the address element containing links to contact information. Add background gradient same as about section and add some margin to push it further away from the projects section */
 .contact {
   padding: 20px 15px 20px 15px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -498,14 +516,21 @@ Center article headings using flex. Do flex-direction column to make sure headin
 
 /*  Make footer 200px tall and turn into flex with content within it justified and aligned to the center of element */
 footer {
-  height: 200px;
+  height: 50px;
+  width: 100vw;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
 }
 
 /*  Increase font size slightly so that text is more legible and change color to white */
 footer p {
+  text-align: center;
   color: var(--off-white);
   font-size: 1.2rem;
 }
@@ -549,12 +574,12 @@ footer p {
   }
 
   .projects-title {
-      width: 100%;
+    width: 100%;
   }
 
   .main-project {
-      width: 100% ;
-      margin: 0 5px 10px 5px;
+    width: 100% ;
+    margin: 0 5px 10px 5px;
   }
   
   /*  Change width of sub projects to 33.3% so they can fit on the same line. */
@@ -574,7 +599,7 @@ footer p {
   }
 
   /*  Change position to absolute and give each p same position in their respective figure element parents */
-  .projects figure p {
+  .projects figure div {
       position: absolute;
       left: 25px;
       bottom: 10px;
