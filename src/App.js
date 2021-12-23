@@ -7,6 +7,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Home from './components/Home';
+import Resume from './components/Resume';
 
 function App() {
 	const [ page, setPage ] = useState('Home');
@@ -20,6 +21,8 @@ function App() {
 			return <Projects />;
 		} else if (page === 'Contact') {
 			return <Contact />;
+		} else if (page === 'Resume') {
+			return <Resume />;
 		}
 	};
 

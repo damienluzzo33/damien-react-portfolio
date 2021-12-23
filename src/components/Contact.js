@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import EmailIcon from '@mui/icons-material/Email';
+import ArticleIcon from '@mui/icons-material/Article';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -43,6 +48,11 @@ export default function Contact() {
 			setErrorMessage("You can't leave your message blank!");
             return;
 		}
+
+		if (validateEmail(userEmail) && userName && message) {
+			setErrorMessage('');
+			return;
+		}
     }
 
 
@@ -63,7 +73,8 @@ export default function Contact() {
 		if (!message) {
 			setErrorMessage("You can't leave your message blank!");
             return;
-		}
+		} 
+		
 
 		setUserName('');
 		setUserEmail('');
@@ -82,7 +93,7 @@ export default function Contact() {
 						name="userEmail"
 						onChange={handleInputChange}
 						type="email"
-						placeholder="Email"
+						placeholder=" Email"
                         onBlur={onBlurFunction}
 					/>
 				</div>
@@ -93,7 +104,7 @@ export default function Contact() {
 						name="userName"
 						onChange={handleInputChange}
 						type="text"
-						placeholder="Name"
+						placeholder=" Name"
                         onBlur={onBlurFunction}
 					/>
 				</div>
@@ -103,11 +114,10 @@ export default function Contact() {
 						value={message}
 						name="message"
 						onChange={handleInputChange}
-						placeholder="Type your message here..."
                         onBlur={onBlurFunction}
 					/>
 				</div>
-				<button type="submit">Submit</button>
+				<button id="contactSubmit" type="submit">Submit</button>
 			</form>
 			{errorMessage && (
 				<div>
@@ -116,19 +126,19 @@ export default function Contact() {
 			)}
 			<address className="contact-links">
 				<a href="mailto:damienluzzo33@gmail.com" target="_blank" rel="noreferrer">
-					Email
+					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="./assets/images/Damien Luzzo Full-Stack Developer Resume.pdf" target="_blank" rel="noreferrer">
-					Resume
+					<ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="https://github.com/damienluzzo33" target="_blank" rel="noreferrer">
-					GitHub
+					<GitHubIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="https://www.linkedin.com/in/damienluzzo/" target="_blank" rel="noreferrer">
-					LinkedIn
+					<LinkedInIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="https://twitter.com/DamienLuzzo" target="_blank" rel="noreferrer">
-					Twitter
+					<TwitterIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 			</address>
 		</section>
