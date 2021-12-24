@@ -6,7 +6,7 @@ export default function About() {
 			<h2>About Me</h2>
 			<article>
 				<div id="profilePic"></div>
-				<p>
+				<p className='profileBio'>
 					Damien is a software engineer and web developer with a passion for artificial intelligence, UX/UI
 					design, site accessibility, and performance optimization. He graduated from the University of
 					California - Santa Barbara with bachelors degrees in both Physics and Philosophy. Damien is also an

@@ -57,7 +57,7 @@ export default function Projects() {
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
-					<ul>
+					<ul className='project-techstack'>
 						<li>Javascript</li>
 						<li>Node</li>
 						<li>Express</li>
@@ -80,7 +80,7 @@ export default function Projects() {
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
-					<ul>
+					<ul className='project-techstack'>
 						<li>React</li>
 						<li>Node</li>
 						<li>Express</li>
@@ -102,7 +102,7 @@ export default function Projects() {
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
-					<ul>
+					<ul className='project-techstack'>
 						<li>Javascript</li>
 						<li>Node</li>
 						<li>Spoonacular</li>
@@ -125,7 +125,7 @@ export default function Projects() {
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
-					<ul>
+					<ul className='project-techstack'>
 						<li>Javascript</li>
 						<li>Node</li>
 						<li>Handlebars</li>
@@ -150,7 +150,7 @@ export default function Projects() {
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
-					<ul>
+					<ul className='project-techstack'>
 						<li>Javascript</li>
 						<li>Node</li>
 						<li>Express</li>
