@@ -1,5 +1,7 @@
 /*  CSS designed with mobile-first approach */
 
+
+
 /*  Create variables for webpage color scheme */
 :root {
   --dark-red: rgb(158, 0, 0);
@@ -10,7 +12,7 @@
 }
 
 * {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif, 'Times New Roman', Times, serif;
   scroll-behavior: smooth;
 }
 
@@ -759,6 +761,180 @@ main {
 .exp-div p {
   color: var(--off-white);
   margin: 10px 25px 15px 25px;
+}
+
+/** ================= CAROUSEL ================= */
+
+.carousel {
+  margin-top: 50px;
+  width: 100%;
+  border: 2px solid orange;
+  height: auto;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: auto;
+  border: 2px solid blue;
+}
+
+#prev {
+
+}
+
+.prevArrow {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#next {
+
+}
+
+.nextArrow {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.slideItem {
+  height: auto;
+  flex-wrap: wrap;
+}
+
+#slide1 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  transition: width 0.7s linear;
+}
+
+#slide2 {
+  width: 0%;
+  display: flex;
+  justify-content: start;
+  transition: width 0.7s linear;
+}
+
+.recDiv {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recProfile {
+  width: 320px;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recProfile h3 {
+  font-size: 24px;
+  color: white;
+}
+
+.recProfile h4 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.recDetails {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
+
+.recMessage {
+  font-size: 16px;
+  color: white;
+  text-align: left;
+  font-style: italic;
+}
+
+.recImage {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  border: 2px solid white;
+}
+
+#coleImage {
+  background-image: url("./images/coleImage.png");
+}
+
+#ethanImage {
+  background-image: url("./images/ethanImage.png");
+}
+
+#christopherImage {
+  background-image: url("./images/christopherImage.png");
+}
+
+#chuckImage {
+  background-image: url("./images/chuckImage.png");
+}
+
+#christianImage {
+  background-image: url("./images/christianImage.png");
+}
+
+.slideButtons {
+  margin-top: 10px;
+}
+
+.slideButtons button {
+  margin: 2px;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 3px;
+}
+
+.slideButtons button:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .recDiv {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .recDetails {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .slideItem {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .recDiv {
+    width: 800px;
+  }
+
+  .recDetails {
+    width: 250px;
+  }
 }
 
 /** ================= FOOTER ================= */

@@ -1,4 +1,5 @@
 import react from "react";
+import RecCarousel from "./recCarousel";
 
 const technicalSkills = [
     "JavaScript", "Python", "TypeScript", "Git", "GitHub", "MongoDB", "Node.js", "Express.js", "Bash", "MySQL", "HTML5", "CSS3", "PostgreSQL", "Bootstrap", "Materialize", "React.js", "WordPress", "Visual Studio", "Google Suite", "API’s", "JSON", "jQuery", "Heroku", "Netlify", "Handlebars", "GraphQL"
@@ -132,6 +133,7 @@ function Resume() {
                             </div>
                         ))}
                     </div>
+                    <RecCarousel />
                 </div>
             </div>
         </div>
