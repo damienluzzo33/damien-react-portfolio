@@ -50,6 +50,7 @@ export default function NavTabs(props) {
 					onClick={handleSidebarOpen}
 					className="materialMenu" 
 					fontSize="large" 
+					style={{display: open ? "none" : "block"}}
 				/>
 				<div className="navbarLogo" />
 				<ul className="navbarLinks">

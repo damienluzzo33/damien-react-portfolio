@@ -107,7 +107,6 @@ main {
   .sidebar {
     z-index: 11;
     position: absolute;
-    width: 0%;
     align-items: start;
     transition: width 0.2s ease-in;
   }
@@ -377,6 +376,8 @@ main {
 .sub-project .project-header {
   position: absolute;
   top: 25px;
+  left: 25px;
+  text-align: left;
   font-size: 1.65rem;
   font-weight: bolder;
   color: var(--off-white);
@@ -461,6 +462,7 @@ main {
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
+      padding: 0px 15% 100px 15%;
   }
 
   .projects-title {
@@ -491,7 +493,7 @@ main {
       bottom: 10px;
   }
 
-  .project-links {
+  /* .project-links {
     display: flex;
     flex-direction: row !important;
     height: 50px;
@@ -499,7 +501,7 @@ main {
     justify-content: center;
     width: 275px;
     height: 50px;
-  }
+  } */
 }
 
 /** ================= CONTACT PAGE ================= */
@@ -1054,7 +1056,7 @@ footer a {
 
 /** ================= MORE MEDIA ================= */
 
-@media screen and (max-width: 572px) {
+@media screen and (max-width: 500px) {
   #clickedIcon {
     display: block;
   }
@@ -1084,9 +1086,9 @@ footer a {
   }
 }
 
-@media screen and (min-width: 572px) {
+@media screen and (min-width: 500px) {
   #clickedIcon {
-    display: none;
+    display: none !important;
   }
 
   .navbarLinks {
