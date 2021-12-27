@@ -1,4 +1,3 @@
-import react from "react";
 import RecCarousel from "./recCarousel";
 
 const technicalSkills = [
