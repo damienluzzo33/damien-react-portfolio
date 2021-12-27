@@ -33,9 +33,9 @@ function RecCarousel() {
             photo: "ethanImage"
         },
         {
-            author: "Christopher Kennard",
+            author: "Chris Kennard",
             title: "Creative Front-End-First Full-Stack Web Developer",
-            message: "Damien Luzzo is without a doubt the kindest most selfless, honest, caring, knowledgeable, and most of all the (most Patient) individual I've ever had the pleasure of working alongside. But it was more than kindness and patience. Damien has a true passion for teaching and helping others reach goals and an understanding of concepts that seem more daunting than life itself. I learned more from Damien weekly than I did from the actual instructional staff that I paid thousands of dollars to educate me on. Damien (a student himself) did not get paid a single dime while he aided me throughout the entirety of the Bootcamp at the University of Texas at Austin. As a matter of fact, many of times, it felt like Damien enrolled in this Bootcamp just to be able to reach out and help more people. I have not even addressed the fact that this brother can code! Damien Luzzo puts the Full-Stack in Full-Stack Developer. All things front end from HTML, JavaScript, CSS styling and React. To all things back end Databases, SQL, API Keys, Servers and so much more.Damien is more than capable of doing anything he sets out to do, and if he seems to be running behind for any reason at all, which is in its self a rarity. I can assure you it's not due to his lack of ability. It's 100% because he's helping someone else before he worries about himself. Thank you Damien for everything!",
+            message: "Damien Luzzo is without a doubt the kindest most selfless, honest, caring, knowledgeable, and most of all, the most patient individual I've ever had the pleasure of working alongside. But it was more than kindness and patience. Damien has a true passion for teaching and helping others reach goals and an understanding of concepts that seem more daunting than life itself. I learned more from Damien weekly than I did from the actual instructional staff that I paid thousands of dollars to educate me on. Damien (a student himself) did not get paid a single dime while he aided me throughout the entirety of the Bootcamp at the University of Texas at Austin. As a matter of fact, many of times, it felt like Damien enrolled in this Bootcamp just to be able to reach out and help more people. I have not even addressed the fact that this brother can code! Damien Luzzo puts the Full-Stack in Full-Stack Developer. From all things front end: HTML, JavaScript, CSS styling and React. To all things back end: Databases, SQL, API Keys, Servers and so much more...",
             photo: "christopherImage"
         }
         // {
@@ -85,7 +85,7 @@ function RecCarousel() {
                 <div 
                     id="slide2"
                     className="slideItem"
-                    style={{width: slideChange ? "100%" : "0%", justifyContent: slideChange ? "end" : "start"}}
+                    style={{width: slideChange ? "100%" : "0%"}}
                 >
                     {recSlide2.map((rec) => (
                         <div style={{display: slideChange ? "flex" : "none"}} className="recDiv" key={rec.image}>

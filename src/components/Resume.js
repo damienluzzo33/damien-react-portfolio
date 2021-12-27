@@ -16,12 +16,12 @@ const softSkills = [
 const educationMain = [
     {
         institution: "University of Texas - Austin",
-        discipline: "Full-Stack Programming Professional Certificate",
+        discipline: "Professional Certificate: Full-Stack Web Development",
         graduationDate: "12/2021"
     },
     {
         institution: "University of California - Santa Barbara",
-        discipline: "Double Major: Physics & Philosophy",
+        discipline: "Bachelors Degrees: Physics & Philosophy",
         graduationDate: "08/2011"
     }
 ]
@@ -71,27 +71,33 @@ function Resume() {
                         Creative, tech-savvy, and detail-oriented UC Santa Barbara graduate with Bachelors degrees in both Physics and Philosophy and a passion for software engineering. Excellent problem solving, teamwork, and communication skills with the ability to work under pressure and meet aggressive deadlines in a fast-paced environment. Eager to begin a new career in software engineering and further develop my programming skills and computer science knowledge.
                     </p>
                 </div>
-                <div className="resume-ed-container">
+                <div className="resume-main-container">
                     <div className="resume-education">
                         <h2>Education</h2>
-                        {educationMain.map((obj, i) => (
-                            <div key={`education-${i}`} className="education-box">
-                                <h4>{obj.institution}</h4>
-                                <p>{obj.discipline}</p>
-                                <p>{obj.graduationDate}</p>
+                        <div className="edu-box">
+                            <div className="main-edu">
+                                {educationMain.map((obj, i) => (
+                                    <div key={`education-${i}`} className="education-box">
+                                        <h4>{obj.institution}</h4>
+                                        <p>{obj.discipline}</p>
+                                        <p>{obj.graduationDate}</p>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                        <div className="education-box">
-                            <h4>Online Bootcamps</h4>
-                            {selfLearning.bootcamps.map((bootcamp, i) => (
-                                <button key={`bootcamp-${i}`}>{bootcamp}</button>
-                            ))}
-                        </div>
-                        <div className="education-box">
-                            <h4>Courses</h4>
-                            {selfLearning.courses.map((course, i) => (
-                                <button key={`course-${i}`}>{course}</button>
-                            ))}
+                            <div className="secondary-edu">
+                                <div className="education-box">
+                                    <h4>Online Bootcamps</h4>
+                                    {selfLearning.bootcamps.map((bootcamp, i) => (
+                                        <button key={`bootcamp-${i}`}>{bootcamp}</button>
+                                    ))}
+                                </div>
+                                <div className="education-box">
+                                    <h4>Courses</h4>
+                                    {selfLearning.courses.map((course, i) => (
+                                        <button key={`course-${i}`}>{course}</button>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="resume-skills">
@@ -123,15 +129,18 @@ function Resume() {
                     </div>
                     <div className="resume-experience">
                         <h2>Relevant Experience</h2>
-                        {workExperience.map((job,i) => (
-                            <div className="exp-div" key={`job-${i}`}>
-                                <h5>{job.company}</h5>
-                                <span>{job.role}</span>
-                                <span>{job.location}</span>
-                                <span>{job.dates}</span>
-                                <p>{job.description}</p>
-                            </div>
-                        ))}
+                        <div className="job-div">
+                            {workExperience.map((job,i) => (
+                                <div className="exp-div" key={`job-${i}`}>
+                                    <h5>{job.company}</h5>
+                                    <span>{job.role}</span>
+                                    <span>{job.location}</span>
+                                    <span>{job.dates}</span>
+                                    <p>{job.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                        
                     </div>
                     <RecCarousel />
                 </div>
