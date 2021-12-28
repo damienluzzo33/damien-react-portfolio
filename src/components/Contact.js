@@ -87,7 +87,7 @@ export default function Contact() {
 			<h2 className="contact-title">Contact</h2>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
 				<div>
-					<label>Email </label>
+					<label>Email</label>
 					<input
 						value={userEmail}
 						name="userEmail"
@@ -98,7 +98,7 @@ export default function Contact() {
 					/>
 				</div>
 				<div>
-					<label>Name </label>
+					<label>Name</label>
 					<input
 						value={userName}
 						name="userName"
@@ -128,7 +128,7 @@ export default function Contact() {
 				<a href="mailto:damienluzzo33@gmail.com" target="_blank" rel="noreferrer">
 					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href="./assets/images/Damien Luzzo Full-Stack Developer Resume.pdf" target="_blank" rel="noreferrer">
+				<a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">
 					<ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="https://github.com/damienluzzo33" target="_blank" rel="noreferrer">

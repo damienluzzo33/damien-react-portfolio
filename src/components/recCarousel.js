@@ -56,8 +56,6 @@ function RecCarousel() {
         setSlideChange(false);
     }
 
-    //! Set up disable functionality for prev and next buttons depending on state of slideChange
-
     return (
         <div class="carousel">
             <div className="slides">
@@ -66,7 +64,6 @@ function RecCarousel() {
                 </div>
                 <div
                     id="slide1"
-                    className="slideItem"
                     style={{width: slideChange ? "0%" : "100%"}}
                 >
                     {recSlide1.map((rec) => (
@@ -84,7 +81,6 @@ function RecCarousel() {
                 </div>
                 <div 
                     id="slide2"
-                    className="slideItem"
                     style={{width: slideChange ? "100%" : "0%"}}
                 >
                     {recSlide2.map((rec) => (

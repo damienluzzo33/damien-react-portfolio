@@ -1,4 +1,6 @@
 import RecCarousel from "./recCarousel";
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const technicalSkills = [
     "JavaScript", "Python", "TypeScript", "Git", "GitHub", "MongoDB", "Node.js", "Express.js", "Bash", "MySQL", "HTML5", "CSS3", "PostgreSQL", "Bootstrap", "Materialize", "React.js", "WordPress", "Visual Studio", "Google Suite", "API’s", "JSON", "jQuery", "Heroku", "Netlify", "Handlebars", "GraphQL"
@@ -29,7 +31,7 @@ const selfLearning = {
     bootcamps: [ "Web Development", "Python", "React.js", "MySQL", "Git and GitHub", "UI/UX for AR/VR", "Typescript"
     ],
     courses: [
-        "Algorithms and Data Structures", "SQL for Data Science", "Postgresql and Relational Databases"
+        "Data Structures and Algorithms", "SQL for Data Science", "Postgresql"
     ]
 }
 
@@ -142,6 +144,20 @@ function Resume() {
                         
                     </div>
                     <RecCarousel />
+                </div>
+            </div>
+            <div className="resumeLinkDiv">
+                <div className="resumeLinkBox">
+                    <a href="./assets/images/Damien-Luzzo-Full-Stack-Developer-Resume.pdf" target="_blank" rel="noreferrer">
+                        <FileDownloadIcon aria-label="download" className='contactIcons' fontSize="large"/>
+                    </a>
+                    <p>Download</p>
+                </div>
+                <div className="resumeLinkBox">
+                    <a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">
+                        <ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
+                    </a>
+                    <p>See More</p>
                 </div>
             </div>
         </div>
