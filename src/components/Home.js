@@ -13,7 +13,7 @@ export default function Home() {
 				<h3>Software Engineer</h3>
 			</article>
 		</section>
-		{/* <section id="preview">
+		<section id="preview">
 			<div id="aboutPreview">
 				<div className='previewBox'>
 					<h2>About Me</h2>
@@ -27,13 +27,25 @@ export default function Home() {
 					<h2>My Projects</h2>
 				</div>
 				<div className='previewBanner'>
+					<div className='projectDropdown'>
+						<p>Cactus Social</p>
+						<button>v</button>
+					</div>
 					<div className='projectPicture'>
 						<div id="projectPreview1">Project1</div>
 						<p>Some Information About The Project</p>
 					</div>
+					<div className='projectDropdown'>
+						<p>Grouper</p>
+						<button>v</button>
+					</div>
 					<div className='projectPicture'>
 						<div id="projectPreview2">Project2</div>
 						<p>Some Information About The Project</p>
+					</div>
+					<div className='projectDropdown'>
+						<p>Git Bloggin</p>
+						<button>v</button>
 					</div>
 					<div className='projectPicture'>
 						<div id="projectPreview3">Project3</div>
@@ -78,7 +90,7 @@ export default function Home() {
 					</a>
 				</div>
 			</div>
-		</section> */}
+		</section>
         </div>
 	);
 }

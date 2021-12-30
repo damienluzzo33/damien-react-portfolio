@@ -168,7 +168,7 @@ main {
   background-size: cover;
   background-position-x: center;
   background-position-y: top;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
 }
@@ -195,6 +195,91 @@ main {
   font-size: 2rem;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
+}
+
+#preview {
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+#aboutPreview {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(114, 114, 114);
+}
+
+#projectsPreview {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(114, 114, 114);
+}
+
+#recPreview {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(114, 114, 114);
+}
+
+#contactPreview {
+  
+}
+
+.previewBox {
+
+}
+
+.previewBox h2 {
+  color: var(--off-white);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.previewBanner {
+
+}
+
+.previewBanner p {
+  color: var(--off-white);
+}
+
+.projectPicture {
+  margin-bottom: 30px;
+  display: none;
+}
+
+.projectPicture div {
+  border: 1px solid violet;
+  width: 100%;
+  height: 400px;
+}
+
+.projectPicture p {
+  padding-top: 15px;
+  color: var(--off-white);
+}
+
+.projectDropdown {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  border: 2px solid blue;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+
+.projectDropdown button {
+  width: 50px;
+  color: var(--off-white);
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid green;
+}
+
+.projectDropdown button:focus {
+  zoom: 105%;
 }
 
 @media screen and (max-width: 420px) {
