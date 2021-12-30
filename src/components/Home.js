@@ -13,7 +13,7 @@ export default function Home() {
 				<h3>Software Engineer</h3>
 			</article>
 		</section>
-		<section id="preview">
+		{/* <section id="preview">
 			<div id="aboutPreview">
 				<div className='previewBox'>
 					<h2>About Me</h2>
@@ -78,7 +78,7 @@ export default function Home() {
 					</a>
 				</div>
 			</div>
-		</section>
+		</section> */}
         </div>
 	);
 }
