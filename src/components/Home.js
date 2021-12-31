@@ -19,7 +19,10 @@ export default function Home() {
 					<h2>About Me</h2>
 				</div>
 				<div className='previewBanner'>
-					<p>A few sentences about me... maybe from LinkedIn?</p>
+					<p>Software engineer and full-stack web developer with bachelor’s degrees in Physics and Philosophy. A natural problem solver, an excellent communicator, and someone who thrives in high-pressure and fast-paced environments. A proven leader and team player who enjoys supporting and mentoring others, who is patient, humble, and open to feedback, and who is always eager to learn more. Equipped with all of the skills necessary to be a productive, proactive, and indispensable asset for whatever company I work for.
+					</p>
+					<p>
+					Interested in UX/UI, artificial intelligence, backend development, and creating applications that deliver convenience, accessibility, and unique experiences to users. Hobbies and prior work experience include physics, filmmaking, environmental activism, project management, teaching, and coding. Passionate about learning, artificial consciousness, climate change, and social justice.</p>
 				</div>
 			</div>
 			<div id="projectsPreview">
@@ -60,11 +63,11 @@ export default function Home() {
 				<div className='previewBanner'>
 					<div id="rec1">
 						<div id="recImage1">Image1</div>
-						<p className='recMessage'>A nice message</p>
+						<p className='recPreviewMessage'>A nice message</p>
 					</div>
 					<div id="rec2">
 						<div id="recImage2">Image2</div>
-						<p className='recMessage'>A nice message</p>
+						<p className='recPreviewMessage'>A nice message</p>
 					</div>
 				</div>
 			</div>

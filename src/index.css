@@ -220,12 +220,9 @@ main {
   border-bottom: 2px solid rgb(114, 114, 114);
 }
 
-#contactPreview {
-  
-}
-
 .previewBox {
-
+  justify-content: center;
+  display: flex;
 }
 
 .previewBox h2 {
@@ -235,11 +232,15 @@ main {
 }
 
 .previewBanner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
 }
 
 .previewBanner p {
   color: var(--off-white);
+  margin-bottom: 10px;
 }
 
 .projectPicture {
@@ -263,7 +264,7 @@ main {
   width: 100%;
   height: 50px;
   align-items: center;
-  border: 2px solid blue;
+  border: 2px solid rgb(114, 114, 114);
   border-radius: 10px;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
@@ -275,11 +276,37 @@ main {
   background-color: transparent;
   border-radius: 10px;
   padding: 5px;
-  border: 2px solid green;
+  border: 2px solid rgb(114, 114, 114);
+}
+
+#recPreview .previewBanner {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#rec1, #rec2 {
+  height: 300px;
+  width: 40%;
+  text-align: center;
 }
 
 .projectDropdown button:focus {
   zoom: 105%;
+}
+
+#contactPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactPreview .previewBanner {
+  flex-direction: row;
+}
+
+#contactPreview .previewBanner a {
+  margin: 10px;
+  color: white;
 }
 
 @media screen and (max-width: 420px) {
