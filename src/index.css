@@ -208,6 +208,11 @@ main {
   border-bottom: 2px solid rgb(114, 114, 114);
 }
 
+#aboutPreview p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 #projectsPreview {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -235,28 +240,48 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .previewBanner p {
   color: var(--off-white);
-  margin-bottom: 10px;
 }
 
 .projectPicture {
   margin-bottom: 30px;
-  display: none;
+  transform: height 1s 0.5s linear;
+  width: 90%;
+  margin: 5%;
+}
+
+#gitBloggin {
+  background-image: url("./images/screenshot_desktop_view.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#grouperApp {
+  background-image: url("./images/screenshot1.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#cactusSocial {
+  background-image: url("./images/cactus_social_screenshot1.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .projectPicture div {
   border: 1px solid violet;
   width: 100%;
-  height: 400px;
+  border-radius: 10px;
+  transition: height 1s linear;
 }
 
 .projectPicture p {
   padding-top: 15px;
   color: var(--off-white);
+  transition: height 1s linear;
 }
 
 .projectDropdown {
@@ -280,18 +305,31 @@ main {
 }
 
 #recPreview .previewBanner {
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
 #rec1, #rec2 {
-  height: 300px;
-  width: 40%;
+  width: 80%;
   text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid rgb(114, 114, 114);
+  margin-bottom: 10px;
+}
+
+.recPreviewMessage {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.recSig {
+  font-size: 18px;
+  font-style: italic;
 }
 
 .projectDropdown button:focus {
-  zoom: 105%;
+  color: blue;
 }
 
 #contactPreview {
