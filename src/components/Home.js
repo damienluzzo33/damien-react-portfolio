@@ -72,10 +72,9 @@ export default function Home() {
 					{ open.project1 ? (
 						<div 
 						className='projectPicture' 
-						style={{height: open.project1 ? "100%" : "0px"}}
 					>
-						<div id="cactusSocial" style={{height: open.project1 ? "300px" : "0px"}} />
-						<p style={{height: open.project1 ? "100%" : "0px"}}>An intuitive, effective, and elegant social media platform for developers that allows users to build communities, communicate with their connections, and engage in direct messaging with their colleagues and friends.</p>
+						<div id="cactusSocial" />
+						<p>An intuitive, effective, and elegant social media platform for developers that allows users to build communities, communicate with their connections, and engage in direct messaging with their colleagues and friends.</p>
 						</div>
 					) : (
 						<></>
@@ -86,9 +85,9 @@ export default function Home() {
 						<button id="projectPreview2" onClick={handleOpen}>v</button>
 					</div>
 					{ open.project2 ? (
-					<div className='projectPicture'  style={{height: open.project2 ? "110%" : "0px"}} >
-						<div id="grouperApp" style={{height: open.project2 ? "300px" : "0px"}} />
-						<p style={{height: open.project2 ? "100%" : "0px"}}>Allows Austin-based users to create and attend events to hang out with friends and to make new ones. User’s RSVPs and create events are sustained and saved to a MySQL database.</p>
+					<div className='projectPicture' >
+						<div id="grouperApp" />
+						<p>A simple event application that allows users to create and attend events to hang out with friends and to make new ones. App is currently targeting Austin-based users. User’s RSVPs and create events are sustained and saved to a MySQL database.</p>
 					</div>
 					) : (
 						<></>
@@ -101,10 +100,9 @@ export default function Home() {
 					{ open.project3 ? (
 					<div 
 						className='projectPicture'
-						style={{height: open.project3 ? "100%" : "0px"}}
 					>
-						<div id="gitBloggin" style={{height: open.project3 ? "300px" : "0px"}}/>
-						<p style={{height: open.project3 ? "100%" : "0px"}}>An efficient and simple to use blogging application for developers and students to exchange ideas, share experiences, and create community. This app uses MySQL to store chat histories and allows uses to start new blogs and comment on blogs by others.</p>
+						<div id="gitBloggin" />
+						<p>An efficient and simple to use blogging application for developers and students to exchange ideas, share experiences, and create community. This app uses MySQL to store chat histories and allows uses to start new blogs and comment on blogs by others.</p>
 					</div>
 					) : (
 						<></>
