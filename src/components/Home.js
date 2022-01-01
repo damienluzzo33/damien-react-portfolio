@@ -136,16 +136,16 @@ export default function Home() {
 						<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 					</a>
 					<a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">
-						<ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
+						<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
 					</a>
 					<a href="https://github.com/damienluzzo33" target="_blank" rel="noreferrer">
-						<GitHubIcon aria-label="email" className='contactIcons' fontSize="large"/>
+						<GitHubIcon aria-label="github" className='contactIcons' fontSize="large"/>
 					</a>
 					<a href="https://www.linkedin.com/in/damienluzzo/" target="_blank" rel="noreferrer">
-						<LinkedInIcon aria-label="email" className='contactIcons' fontSize="large"/>
+						<LinkedInIcon aria-label="linkedin" className='contactIcons' fontSize="large"/>
 					</a>
 					<a href="https://twitter.com/DamienLuzzo" target="_blank" rel="noreferrer">
-						<TwitterIcon aria-label="email" className='contactIcons' fontSize="large"/>
+						<TwitterIcon aria-label="twitter" className='contactIcons' fontSize="large"/>
 					</a>
 				</div>
 			</div>

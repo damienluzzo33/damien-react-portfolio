@@ -6,9 +6,6 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import DescriptionModal from './DescriptionModal'
 
-//* potentially turn th tech stack into its own dropdown or separate modal with a stack icon as the button
-// import TableRowsIcon from '@mui/icons-material/TableRows';
-
 export default function Projects() {
 
 	const [chosenProject, setChosenProject] = React.useState("")
