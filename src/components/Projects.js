@@ -5,8 +5,11 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import DescriptionModal from './DescriptionModal'
+import projects from "../data/projects.json";
 
 export default function Projects() {
+
+	console.log(projects);
 
 	const [chosenProject, setChosenProject] = React.useState("")
 

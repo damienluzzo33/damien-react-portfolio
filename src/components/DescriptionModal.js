@@ -1,4 +1,5 @@
 import React from 'react';
+import projects from "../data/projects.json";
 
 const projectInfo = {
     grouperApp: {
@@ -28,6 +29,8 @@ const projectInfo = {
 }
 
 function DescriptionModal(props) {
+
+    console.log(projects);
 
     let selectedProject;
     const {projectName} = props;

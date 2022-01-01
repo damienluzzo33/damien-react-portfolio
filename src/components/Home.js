@@ -4,8 +4,18 @@ import ArticleIcon from '@mui/icons-material/Article';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import projects from "../data/projects.json";
+import aboutMe from "../data/aboutMe.json";
+import contact from "../data/contact.json";
+import recs from "../data/rec.json";
+
 
 export default function Home() {
+
+	console.log(contact);
+	console.log(projects);
+	console.log(aboutMe);
+	console.log(recs);
 
 	const [open, setOpen] = React.useState(
 		{
@@ -132,7 +142,7 @@ export default function Home() {
 					<h2>Contact Me</h2>
 				</div>
 				<div className='previewBanner'>
-					<a href="mailto:damienluzzo33@gmail.com" target="_blank" rel="noreferrer">
+					<a href="mailto:damientluzzo@gmail.com" target="_blank" rel="noreferrer">
 						<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 					</a>
 					<a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">

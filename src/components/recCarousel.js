@@ -1,8 +1,11 @@
 import React from "react";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import recs from "../data/rec.json";
 
 function RecCarousel() {
+
+    console.log(recs);
 
     const recSlide1 = [
         {

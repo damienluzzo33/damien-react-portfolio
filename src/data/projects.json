@@ -2,31 +2,67 @@
     "projects": [
         {
             "title":"Cactus Social",
-            "text":"An intuitive, effective, and elegant social media platform for developers that allows users to build communities, communicate with their connections, and engage in direct messaging with their colleagues and friends."
+            "text":"An intuitive, effective, and elegant social media platform for developers that allows users to build communities, communicate with their connections, and engage in direct messaging with their colleagues and friends.",
+            "github": "https://github.com/cole-cochran/Cactus-Social",
+            "deploy": "https://cactus-social.herokuapp.com/",
+            "techStack": [
+                "Javascript", "React", "MongoDB", "GraphQL",
+                "Express", "JWT", "Mongoose", "Apollo", "React Router", "Weavy", "MUI", "CSS"
+            ]
         },
         {
             "title": "Grouper App",
-            "text": "Allows Austin-based users to create and attend events to hang out with friends and to make new ones. User’s RSVPs and create events are sustained and saved to a MySQL database."
+            "text": "Allows Austin-based users to create and attend events to hang out with friends and to make new ones. User’s RSVPs and create events are sustained and saved to a MySQL database.",
+            "github": "https://github.com/damienluzzo33/Grouper-App",
+            "deploy": "https://the-grouper-app.herokuapp.com/",
+            "techStack": [
+                "Javascript", "Node", "Express", "CSS", "Materialize", "MySQL", "Sequelize", "Handlebars"
+            ]
         },
         {
             "title": "Git Bloggin",
-            "text": "An efficient and simple to use blogging application for developers and students to exchange ideas, share experiences, and create community. This app uses MySQL to store chat histories and allows uses to start new blogs and comment on blogs by others."
+            "text": "An efficient and simple to use blogging application for developers and students to exchange ideas, share experiences, and create community. This app uses MySQL to store chat histories and allows uses to start new blogs and comment on blogs by others.",
+            "github": "https://github.com/damienluzzo33/Git-Bloggin",
+            "deploy": "https://git-bloggin.herokuapp.com/",
+            "techStack": [
+                "Javascript", "Node", "Express", "CSS", "MySQL", "Sequelize", "Handlebars"
+            ]
         },
         {
             "title": "Dynamite Recipes",
-            "text": "An easy-to-use application that presents users with suggested recipes that they can cook or prepare based on the food ingredients that the user provides. User-selected ingredients are saved so their ingredients are sustained."
+            "text": "An easy-to-use application that presents users with suggested recipes that they can cook or prepare based on the food ingredients that the user provides. User-selected ingredients are saved so their ingredients are sustained.",
+            "github": "https://github.com/damienluzzo33/Project-1",
+            "deploy": "https://damienluzzo33.github.io/Project-1/",
+            "techStack": [
+                "Javascript", "Node", "Spoonacular", "CSS", "Materialize"
+            ]
         },
         {
             "title": "Color Palette Maker",
-            "text": "An elegant color palette application that allows users to create their own color palettes or utilize up to nine provided palettes. When the user creates a palette, their created palettes are saved for future app usage."
+            "text": "An elegant color palette application that allows users to create their own color palettes or utilize up to nine provided palettes. When the user creates a palette, their created palettes are saved for future app usage.",
+            "github": "https://github.com/damienluzzo33/color-palette-maker",
+            "deploy": "",
+            "techStack": [
+                "React", "Node", "Express", "MUI", "CSS", "Chroma", "React Router"
+            ]
         },
         {
             "title": "Duly Noted",
-            "text": "A simple note taking application to keep track of your day, take notes, and set reminders. Duly Noted was created to make the process of making, tracking, and completing notes and tasks seamless, uncomplicated, and fun."
+            "text": "A simple note taking application to keep track of your day, take notes, and set reminders. Duly Noted was created to make the process of making, tracking, and completing notes and tasks seamless, uncomplicated, and fun.",
+            "github": "https://github.com/damienluzzo33/Duly-Noted-App",
+            "deploy": "https://duly-noted-application.herokuapp.com/",
+            "techStack": [
+                "Javascript", "Node", "Express", "CSS", "Bootstrap"
+            ]
         },
         {
             "title": "Data Structures And Algorithms Bootcamp",
-            "text": "A thorough and detailed learning curriculum for students, professionals, and aspiring software developers seeking to learn about algorithms and data structures. Complete with slide show presentations, walk-through exercises, activities, and take-home assignments written in Javascript that is easy to navigate and learn from for self-guided study for anyone looking to bolster their knowledge of the most common Data Structures and Algorithms, to prepare for technical interviews, or to learn it all from scratch."
+            "text": "A thorough and detailed learning curriculum for students, professionals, and aspiring software developers seeking to learn about algorithms and data structures. Complete with slide show presentations, walk-through exercises, activities, and take-home assignments written in Javascript that is easy to navigate and learn from for self-guided study for anyone looking to bolster their knowledge of the most common Data Structures and Algorithms, to prepare for technical interviews, or to learn it all from scratch.",
+            "github": "https://github.com/damienluzzo33/data-structures-and-algorithms-bootcamp",
+            "deploy": "",
+            "techStack": [
+                "Javascript", "Google Slides"
+            ]
         }
     ]
 }

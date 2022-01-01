@@ -1,6 +1,6 @@
 # Damien Luzzo Portfolio Website
 
-Who is Damien Luzzo? Click the link below to find out.
+Welcome to the repository for Damien Luzzo's software engineering and web development portfolio. Click the link below to visit the deployed site on Netlify.
 
 [Damien Luzzo's Awesome Portfolio On Netlify](https://61b05087eb75790007426955--trusting-visvesvaraya-554a02.netlify.app/)
 

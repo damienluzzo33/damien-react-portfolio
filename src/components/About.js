@@ -1,6 +1,10 @@
 import React from 'react';
+import aboutMe from "../data/aboutMe.json";
 
 export default function About() {
+	
+	console.log(aboutMe)
+
 	return (
 		<section id="about" className="about">
 			<h2>About Me</h2>

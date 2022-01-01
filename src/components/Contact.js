@@ -4,6 +4,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import contact from "../data/contact.json";
 
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -11,6 +12,9 @@ function validateEmail(email) {
 }
 
 export default function Contact() {
+
+	console.log(contact);
+
 	const [ userEmail, setUserEmail ] = useState('');
 	const [ userName, setUserName ] = useState('');
 	const [ message, setMessage ] = useState('');
@@ -125,7 +129,7 @@ export default function Contact() {
 				</div>
 			)}
 			<address className="contact-links">
-				<a href="mailto:damienluzzo33@gmail.com" target="_blank" rel="noreferrer">
+				<a href="mailto:damientluzzo@gmail.com" target="_blank" rel="noreferrer">
 					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">

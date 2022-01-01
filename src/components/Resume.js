@@ -1,6 +1,7 @@
 import RecCarousel from "./recCarousel";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ArticleIcon from '@mui/icons-material/Article';
+import resume from "../data/resume.json";
 
 const technicalSkills = [
     "JavaScript", "Python", "TypeScript", "Git", "GitHub", "MongoDB", "Node.js", "Express.js", "Bash", "MySQL", "HTML5", "CSS3", "PostgreSQL", "Bootstrap", "Materialize", "React.js", "WordPress", "Visual Studio", "Google Suite", "APIs", "JSON", "jQuery", "Heroku", "Netlify", "Handlebars", "GraphQL"
@@ -60,6 +61,8 @@ const workExperience = [
 ]
 
 function Resume() {
+
+    console.log(resume);
 
     return (
         <div className="resume-div">
