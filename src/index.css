@@ -9,7 +9,12 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Zilla Slab', serif; */
 
 /*  Create variables for webpage color scheme */
+
 :root {
+  --turquoise: #4CD2FF;
+  --dark-turq: #044762;
+  --darker-turq: #041B33;
+
   --dark-red: rgb(158, 0, 0);
   --darker-blue: rgb(0, 40, 87);
   --dark-blue: rgb(0, 74, 158);
@@ -103,7 +108,7 @@ main {
   box-shadow: 2px 2px 6px var(--dark-blue), -2px -2px 6px var(--dark-blue), 2px -2px 6px var(--dark-blue), -2px 2px 6px var(--dark-blue) !important;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .sidebar {
     z-index: 11;
     position: absolute;
@@ -198,7 +203,7 @@ main {
 }
 
 #preview {
-  padding: 20px;
+  padding: 20px 10%;
   padding-bottom: 80px;
 }
 
@@ -252,19 +257,19 @@ main {
   margin: 5%;
 }
 
-#gitBloggin {
+#gitBlogginPreview {
   background-image: url("./images/screenshot_desktop_view.png");
   background-position: center;
   background-size: cover;
 }
 
-#grouperApp {
+#grouperAppPreview {
   background-image: url("./images/screenshot1.png");
   background-position: center;
   background-size: cover;
 }
 
-#cactusSocial {
+#cactusSocialPreview {
   background-image: url("./images/cactus_social_screenshot1.png");
   background-position: center;
   background-size: cover;
@@ -427,7 +432,7 @@ main {
   margin-top: 100px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
 
   .about {
       height: auto;
@@ -446,7 +451,7 @@ main {
       margin-right: 35px;
   }
 
-  .about article p {
+  .about article div {
       margin-top: 0;
       width: 50%;
       flex: 1 1 300px;
@@ -491,13 +496,13 @@ main {
 }
 
 .main-project {
-  height: 500px;
+  height: 300px;
   border: solid 2px var(--off-white);
   width: 100%;
-  background-image: url("./images/project_2_giphy.gif");
+  background-image: url("./images/cactus_social_screenshot1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
   filter: grayscale(60%);
   transition: filter 0.5s linear;
 }
@@ -512,28 +517,42 @@ main {
 }
 
 .projects figure:nth-of-type(2) {
-  background-image: url("./images/react-color-palette-img.png");
+  background-image: url("./images/screenshot1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 .projects figure:nth-of-type(3) {
-  background-image: url("./images/68747470733a2f2f692e696d6775722e636f6d2f796d32357031432e706e67.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.projects figure:nth-of-type(4) {
   background-image: url("./images/screenshot_desktop_view.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
+.projects figure:nth-of-type(4) {
+  background-image: url("./images/68747470733a2f2f692e696d6775722e636f6d2f796d32357031432e706e67.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 .projects figure:nth-of-type(5) {
+  background-image: url("./images/react-color-palette-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.projects figure:nth-of-type(6) {
   background-image: url("./images/duly_noted_screenshot_desktop_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.projects figure:nth-of-type(7) {
+  background-image: url("./images/dsalgoshot1.PNG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -545,7 +564,7 @@ main {
 
 .main-project-header {
   position: absolute;
-  bottom: 110px;
+  bottom: 160px;
   /* left: 25px; */
   font-size: 2rem;
   font-weight: bolder;
@@ -1136,6 +1155,10 @@ main {
   background-image: url("./images/christianImage.png");
 }
 
+#natalia_hess1 {
+  background-image: url("./images/natalia_hess1.PNG");
+}
+
 .slideButtons {
   margin-top: 10px;
 }
@@ -1259,7 +1282,7 @@ footer a {
 
 /** ================= MORE MEDIA ================= */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   #clickedIcon {
     display: block;
   }
@@ -1289,7 +1312,7 @@ footer a {
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
   #clickedIcon {
     display: none !important;
   }

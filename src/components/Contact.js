@@ -13,8 +13,6 @@ function validateEmail(email) {
 
 export default function Contact() {
 
-	console.log(contact);
-
 	const [ userEmail, setUserEmail ] = useState('');
 	const [ userName, setUserName ] = useState('');
 	const [ message, setMessage ] = useState('');
@@ -91,17 +89,6 @@ export default function Contact() {
 			<h2 className="contact-title">Contact</h2>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
 				<div>
-					<label>Email</label>
-					<input
-						value={userEmail}
-						name="userEmail"
-						onChange={handleInputChange}
-						type="email"
-						placeholder=" Email"
-                        onBlur={onBlurFunction}
-					/>
-				</div>
-				<div>
 					<label>Name</label>
 					<input
 						value={userName}
@@ -112,6 +99,18 @@ export default function Contact() {
                         onBlur={onBlurFunction}
 					/>
 				</div>
+				<div>
+					<label>Email</label>
+					<input
+						value={userEmail}
+						name="userEmail"
+						onChange={handleInputChange}
+						type="email"
+						placeholder=" Email"
+                        onBlur={onBlurFunction}
+					/>
+				</div>
+				
 				<div>
 					<label>Message </label>
 					<textarea
@@ -129,20 +128,20 @@ export default function Contact() {
 				</div>
 			)}
 			<address className="contact-links">
-				<a href="mailto:damientluzzo@gmail.com" target="_blank" rel="noreferrer">
+				<a href={contact.email} target="_blank" rel="noreferrer">
 					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">
-					<ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
+				<a href={contact.resume} target="_blank" rel="noreferrer">
+					<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href="https://github.com/damienluzzo33" target="_blank" rel="noreferrer">
-					<GitHubIcon aria-label="email" className='contactIcons' fontSize="large"/>
+				<a href={contact.github} target="_blank" rel="noreferrer">
+					<GitHubIcon aria-label="github" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href="https://www.linkedin.com/in/damienluzzo/" target="_blank" rel="noreferrer">
-					<LinkedInIcon aria-label="email" className='contactIcons' fontSize="large"/>
+				<a href={contact.linkedin} target="_blank" rel="noreferrer">
+					<LinkedInIcon aria-label="linkedin" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href="https://twitter.com/DamienLuzzo" target="_blank" rel="noreferrer">
-					<TwitterIcon aria-label="email" className='contactIcons' fontSize="large"/>
+				<a href={contact.twitter} target="_blank" rel="noreferrer">
+					<TwitterIcon aria-label="twitter" className='contactIcons' fontSize="large"/>
 				</a>
 			</address>
 		</section>

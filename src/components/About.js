@@ -2,23 +2,21 @@ import React from 'react';
 import aboutMe from "../data/aboutMe.json";
 
 export default function About() {
-	
-	console.log(aboutMe)
 
 	return (
 		<section id="about" className="about">
 			<h2>About Me</h2>
 			<article>
 				<div id="profilePic"></div>
-				<p className='profileBio'>
-					Damien is a software engineer and web developer with a passion for artificial intelligence, UX/UI
-					design, site accessibility, and performance optimization. He graduated from the University of
-					California - Santa Barbara with bachelors degrees in both Physics and Philosophy. Damien is also an
-					entrepreneur, teacher, documentary filmmaker, amateur photographer, and a social justice & climate
-					change activist. In his free time, he hangs out with his two cats and two dogs and enjoys gardening,
-					weight lifting, learning, watching/playing football and soccer, coding, and making the world a
-					better place.
-				</p>
+				<div id='bioText'>
+					<p className='profileBio'>
+						{aboutMe.bio_part1}
+					</p>
+					<p className='profileBio'>
+						{aboutMe.bio_part2}
+					</p>
+				</div>
+				
 			</article>
 		</section>
 	);

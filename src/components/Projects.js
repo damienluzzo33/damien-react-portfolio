@@ -9,7 +9,10 @@ import projects from "../data/projects.json";
 
 export default function Projects() {
 
-	console.log(projects);
+	const mainProject = projects[0];
+	const subProjects = projects.filter((project) => (
+		project.key !== "cactusSocial"
+	));
 
 	const [chosenProject, setChosenProject] = React.useState("")
 
@@ -40,123 +43,60 @@ export default function Projects() {
 		boxShadow: 24,
 		p: 4,
 	};
+	
 	return (
 		<section id="projects" className="projects">
 			<h2 className="projects-title">Projects</h2>
 			<figure className="main-project">
-				<h3 className="main-project-header">Grouper App</h3>
+				<h3 className="main-project-header">{mainProject.title}</h3>
 				<div>
 					<div className="project-links">
-						<a href="https://github.com/damienluzzo33/Grouper-App" rel="noopener noreferrer" target="_blank">
+						<a href={mainProject.github} rel="noopener noreferrer" target="_blank">
 							<CodeIcon className="material" fontSize="large" />
 						</a>
-						<a href="https://the-grouper-app.herokuapp.com/" rel="noopener noreferrer" target="_blank">
+						<a href={mainProject.deploy} rel="noopener noreferrer" target="_blank">
 							<LinkIcon className="material" fontSize="large" />
 						</a>
-						<div id="grouperApp" onClick={handleOpen}>
+						<div id={mainProject.key} onClick={handleOpen}>
 							<MoreHorizIcon className="material" fontSize="large" />
 						</div>
 					</div>
 					<ul className='project-techstack'>
-						<li>Javascript</li>
-						<li>Node</li>
-						<li>Express</li>
+						{mainProject.techStack.map((tech) => (
+							<li>{tech}</li>
+						))}
 					</ul>
 				</div>
 			</figure>
-			<figure className="sub-project">
-				<h3 className="project-header">Color Palette Maker</h3>
-				<div>
-					<div className="project-links">
-						<a
-							href="https://github.com/damienluzzo33/color-palette-maker"
-							rel="noopener noreferrer"
-							target="_blank"
-						>
-							<CodeIcon className="material" fontSize="large" 
-							/>
-						</a>
-						<div id="colorPaletteMaker" onClick={handleOpen}>
-							<MoreHorizIcon className="material" fontSize="large" />
+			{subProjects.map((project) => (
+				<figure className={`sub-project ${project.key}`} key={project.key}>
+					<h3 className="project-header">{project.title}</h3>
+					<div>
+						<div className="project-links">
+							<a href={project.github} rel="noopener noreferrer" target="_blank">
+								<CodeIcon className="material" fontSize="large" />
+							</a>
+							{project.deploy
+							? (
+								<a href={project.deploy} rel="noopener noreferrer" target="_blank">
+								<LinkIcon className="material" fontSize="large" />
+								</a>
+							) : (
+								<></>
+							)
+							}
+							<div id={project.key} onClick={handleOpen}>
+								<MoreHorizIcon className="material" fontSize="large" />
+							</div>
 						</div>
+						<ul className='project-techstack'>
+							{project.techStack.map((tech) => (
+								<li>{tech}</li>
+							))}
+						</ul>
 					</div>
-					<ul className='project-techstack'>
-						<li>React</li>
-						<li>Node</li>
-						<li>Express</li>
-						<li>CSS</li>
-					</ul>
-				</div>
-			</figure>
-			<figure className="sub-project">
-				<h3 className="project-header">Dynamite Recipes</h3>
-				<div>
-					<div className="project-links">
-						<a href="https://github.com/damienluzzo33/Project-1" rel="noopener noreferrer" target="_blank">
-							<CodeIcon className="material" fontSize="large" />
-						</a>
-						<a href="https://damienluzzo33.github.io/Project-1/" rel="noopener noreferrer" target="_blank">
-							<LinkIcon className="material" fontSize="large" />
-						</a>
-						<div id="dynamiteRecipes" onClick={handleOpen}>
-							<MoreHorizIcon className="material" fontSize="large" />
-						</div>
-					</div>
-					<ul className='project-techstack'>
-						<li>Javascript</li>
-						<li>Node</li>
-						<li>Spoonacular</li>
-						<li>Materialize</li>
-						<li>CSS</li>
-					</ul>
-				</div>
-			</figure>
-			<figure className="sub-project">
-				<h3 className="project-header">Git Bloggin</h3>
-				<div>
-					<div className="project-links">
-						<a href="https://github.com/damienluzzo33/Git-Bloggin" rel="noopener noreferrer" target="_blank">
-							<CodeIcon className="material" fontSize="large" />
-						</a>
-						<a href="https://git-bloggin.herokuapp.com/" rel="noopener noreferrer" target="_blank">
-							<LinkIcon className="material" fontSize="large" />
-						</a>
-						<div id="gitBloggin" onClick={handleOpen}>
-							<MoreHorizIcon className="material" fontSize="large" />
-						</div>
-					</div>
-					<ul className='project-techstack'>
-						<li>Javascript</li>
-						<li>Node</li>
-						<li>Handlebars</li>
-						<li>Express</li>
-						<li>MySQL</li>
-						<li>Sequelize</li>
-						<li>CSS</li>
-					</ul>
-				</div>
-			</figure>
-			<figure className="sub-project">
-				<h3 className="project-header">Duly Noted</h3>
-				<div>
-					<div className="project-links">
-						<a href="https://github.com/damienluzzo33/Duly-Noted-App" rel="noopener noreferrer" target="_blank">
-							<CodeIcon className="material" fontSize="large" />
-						</a>
-						<a href="https://duly-noted-application.herokuapp.com/" rel="noopener noreferrer" target="_blank">
-							<LinkIcon className="material" fontSize="large" />
-						</a>
-						<div id="dulyNoted" onClick={handleOpen}>
-							<MoreHorizIcon className="material" fontSize="large" />
-						</div>
-					</div>
-					<ul className='project-techstack'>
-						<li>Javascript</li>
-						<li>Node</li>
-						<li>Express</li>
-					</ul>
-				</div>
-			</figure>
+				</figure>
+			))}
 			<Modal
 				open={open}
 				onClose={handleClose}
