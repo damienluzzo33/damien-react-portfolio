@@ -1,8 +1,99 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Portfolio",
+  "name": "Damien Portfolio",
+  "icons": [
+    {
+      "src": "../src/images/20181209_223633.jpg",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/68747470733a2f2f692e696d6775722e636f6d2f796d32357031432e706e67.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/about_page.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/about_page_final.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/available_for.PNG",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/available_for2.PNG",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/cactus_social_screenshot1.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/christianImage.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/christopherImage.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/chuckImage.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/coleImage.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/dsalgoshot1.PNG",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/duly_noted_screenshot_desktop_1.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/ethanImage.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/gradient background.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/homework2_screenshot.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/homework2_screenshot_mobile2.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/natalia_hess1.PNG",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/react-color-palette-img.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/screenshot1.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/screenshot_weather_app.png",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/images/screentshot_4.png",
+      "type": "image/png"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+

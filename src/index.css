@@ -179,31 +179,33 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
 }
 
 #home h2 {
   color: var(--turquoise);
-  font-size: 5.5rem;
+  font-size: 3.6rem;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 #home h3 {
-  margin: 5px;
+  margin-bottom: 5px;
   color: var(--turquoise);
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
 }
 
 #preview {
-  padding: 20px 10%;
-  padding-bottom: 80px;
-  background-image: url("./images/gradient\ background.png");
-  background-position: bottom;
-  background-size: cover;
+  padding: 20px 10% 80px 10%;
+  background: #041b33;
+  background: -moz-linear-gradient(45deg,  #041b33 6%, #044762 52%, #044762 54%, #044762 63%, #041b33 100%);
+  background: -webkit-linear-gradient(45deg,  #041b33 6%,#044762 52%,#044762 54%,#044762 63%,#041b33 100%);
+  background: linear-gradient(45deg,  #041b33 6%,#044762 52%,#044762 54%,#044762 63%,#041b33 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041b33', endColorstr='#041b33',GradientType=1 );
 }
 
 #aboutPreview {
@@ -416,6 +418,16 @@ main {
     justify-content: flex-start;
     padding: 0px 0px 50px 70px;
   }
+
+  #home h2 {
+    font-size: 5.5rem;
+    margin-bottom: 5px;
+  }
+
+  #home h3 {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
   
   #home article {
     align-items: flex-start;
@@ -485,6 +497,50 @@ main {
   #cactusSocial {
     background-position: top;
   }
+}
+
+.mainShow {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.leftButton, .rightButton {
+  color: white;
+  height: 30px;
+  min-width: 50px;
+  margin: 0px 6px 0px 6px;
+}
+
+.testimonialBox {
+  margin: 15px 4px;
+  width: 90vw;
+}
+
+.testimonialQuote {
+  padding: 20px 15px 10px 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonialSig {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 0px 15px 10px 15px;
+}
+
+.carousel {
+  background-color: transparent;
+  margin: 20px 0px 20px 0px;
+  height: auto;
+  padding: 15px 15px 15px 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+#recCarouselComponent {
+  background-color: ;
 }
 
 /** ================= ABOUT PAGE ================= */
@@ -1121,17 +1177,6 @@ main {
 }
 
 /** ================= CAROUSEL ================= */
-
-.carousel {
-  border: 5px solid var(--dark);
-  box-shadow: 3px 3px 6px var(--dark);
-  border-radius: 25px;
-  background-color: var(--dark-blue);
-  margin: 20px 0px 20px 0px;
-  height: auto;
-  padding: 0 15px 15px 15px;
-  align-items: center;
-}
 
 .slides {
   display: flex;

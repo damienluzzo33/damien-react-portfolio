@@ -8,6 +8,8 @@ import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
 import contact from "../data/contact.json";
 import recs from "../data/rec.json";
+import RecCarouselSideshow from "./RecCarouselSlideshow"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 
 export default function Home() {
@@ -132,13 +134,16 @@ export default function Home() {
 					<h2>Testimonials</h2>
 				</div>
 				<div className='previewBanner'>
-					<div id="rec1">
+					{/* <div id="rec1">
 						<p className='recPreviewMessage'>{recs[0].message}</p>
 						<p className='recSig'>- {recs[0].author}, {recs[0].title}</p>
 					</div>
 					<div id="rec2">
 						<p className='recPreviewMessage'>{recs[1].message}</p>
 						<p className='recSig'>- {recs[1].author}, {recs[1].title}</p>
+					</div> */}
+					<div className='recSlideshow'>
+						<RecCarouselSideshow />
 					</div>
 				</div>
 			</div>
