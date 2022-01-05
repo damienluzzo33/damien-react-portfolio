@@ -6,10 +6,6 @@ export default function RecCarouselSlideshow() {
 
     console.log(recs);
 
-    const styles = {
-        backgroundColor: "black !important"
-    }
-
     return (
         <React.Fragment>
             <div className='mainShow'>

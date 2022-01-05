@@ -7,7 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
 import contact from "../data/contact.json";
-import recs from "../data/rec.json";
 import RecCarouselSideshow from "./RecCarouselSlideshow"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
@@ -81,13 +80,10 @@ export default function Home() {
 			</div>
 			<div id="projectsPreview">
 				<div className='previewBox'>
-					<h2>My Projects</h2>
+					<h2>Recent Projects</h2>
 				</div>
 				<div className='previewBanner'>
-					<div className='projectDropdown'>
-						<p>{projects[0].title}</p>
-						<button id="projectPreview1" onClick={handleOpen}>v</button>
-					</div>
+					<button className='projectDropdown' id="projectPreview1" onClick={handleOpen}>{projects[0].title}</button>
 					{ open.project1 ? (
 						<div 
 						className='projectPicture' 
@@ -99,10 +95,7 @@ export default function Home() {
 						<></>
 					)
 					}
-					<div className='projectDropdown'>
-						<p>{projects[1].title}</p>
-						<button id="projectPreview2" onClick={handleOpen}>v</button>
-					</div>
+					<button className='projectDropdown' id="projectPreview2" onClick={handleOpen}>{projects[1].title}</button>
 					{ open.project2 ? (
 					<div className='projectPicture' >
 						<div id="grouperAppPreview" />
@@ -112,10 +105,7 @@ export default function Home() {
 						<></>
 					)
 					}
-					<div className='projectDropdown'>
-						<p>{projects[2].title}</p>
-						<button id="projectPreview3" onClick={handleOpen}>v</button>
-					</div>
+					<button className='projectDropdown' id="projectPreview3" onClick={handleOpen}>{projects[2].title}</button>
 					{ open.project3 ? (
 					<div 
 						className='projectPicture'
@@ -134,14 +124,6 @@ export default function Home() {
 					<h2>Testimonials</h2>
 				</div>
 				<div className='previewBanner'>
-					{/* <div id="rec1">
-						<p className='recPreviewMessage'>{recs[0].message}</p>
-						<p className='recSig'>- {recs[0].author}, {recs[0].title}</p>
-					</div>
-					<div id="rec2">
-						<p className='recPreviewMessage'>{recs[1].message}</p>
-						<p className='recSig'>- {recs[1].author}, {recs[1].title}</p>
-					</div> */}
 					<div className='recSlideshow'>
 						<RecCarouselSideshow />
 					</div>

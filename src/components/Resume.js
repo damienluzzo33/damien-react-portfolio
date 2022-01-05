@@ -2,7 +2,7 @@ import RecCarousel from "./recCarousel";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ArticleIcon from '@mui/icons-material/Article';
 import resume from "../data/resume.json";
-import aboutMe from "../data/aboutMe.json";
+// import aboutMe from "../data/aboutMe.json";
 
 function Resume() {
 
@@ -10,12 +10,12 @@ function Resume() {
         <div className="resume-div">
             <h2 className="resume-title">Resume</h2>
             <div className="resume-content">
-                <h3 className="name-header">{aboutMe.name}</h3>
+                {/* <h3 className="name-header">{aboutMe.name}</h3>
                 <h4 className="title-header">{aboutMe.title}</h4>
                 <div className="resume-summary">
                     <p>{aboutMe.bio_part1}</p>
                     <p>{aboutMe.bio_part2}</p>
-                </div>
+                </div> */}
                 <div className="resume-main-container">
                     <div className="resume-education">
                         <h2>Education</h2>
@@ -31,13 +31,10 @@ function Resume() {
                             </div>
                             <div className="secondary-edu">
                                 <div className="education-box">
-                                    <h4>Online Bootcamps</h4>
+                                    <h4>Online Courses and Bootcamps</h4>
                                     {resume.selfLearning.bootcamps.map((bootcamp, i) => (
                                         <button key={`bootcamp-${i}`}>{bootcamp}</button>
                                     ))}
-                                </div>
-                                <div className="education-box">
-                                    <h4>Courses</h4>
                                     {resume.selfLearning.courses.map((course, i) => (
                                         <button key={`course-${i}`}>{course}</button>
                                     ))}
@@ -87,7 +84,7 @@ function Resume() {
                         </div>
                         
                     </div>
-                    <RecCarousel />
+                    {/* <RecCarousel /> */}
                 </div>
             </div>
             <div className="resumeLinkDiv">

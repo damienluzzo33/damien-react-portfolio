@@ -22,10 +22,10 @@
     ],
     "selfLearning": {
         "bootcamps": [
-            "Web Development", "Python", "React.js", "MySQL", "Git and GitHub", "UI/UX for AR/VR", "Typescript"
+            "Web Development", "Python", "React", "MySQL", "Git & GitHub", "UI/UX for AR/VR", "Typescript"
         ],
         "courses": [
-            "Data Structures and Algorithms", "SQL for Data Science", "Postgresql"
+            "Data Structures & Algorithms", "SQL for Data Science", "Postgresql"
         ]
     },
     "workExperience": [

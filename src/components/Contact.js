@@ -134,15 +134,6 @@ export default function Contact() {
 				<a href={contact.resume} target="_blank" rel="noreferrer">
 					<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
 				</a>
-				<a href={contact.github} target="_blank" rel="noreferrer">
-					<GitHubIcon aria-label="github" className='contactIcons' fontSize="large"/>
-				</a>
-				<a href={contact.linkedin} target="_blank" rel="noreferrer">
-					<LinkedInIcon aria-label="linkedin" className='contactIcons' fontSize="large"/>
-				</a>
-				<a href={contact.twitter} target="_blank" rel="noreferrer">
-					<TwitterIcon aria-label="twitter" className='contactIcons' fontSize="large"/>
-				</a>
 			</address>
 		</section>
 	);
