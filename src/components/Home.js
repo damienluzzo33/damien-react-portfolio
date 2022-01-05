@@ -1,12 +1,12 @@
 import React from 'react';
-import EmailIcon from '@mui/icons-material/Email';
-import ArticleIcon from '@mui/icons-material/Article';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+// import EmailIcon from '@mui/icons-material/Email';
+// import ArticleIcon from '@mui/icons-material/Article';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import TwitterIcon from '@mui/icons-material/Twitter';
 import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
-import contact from "../data/contact.json";
+// import contact from "../data/contact.json";
 import RecCarouselSideshow from "./RecCarouselSlideshow"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
@@ -58,7 +58,7 @@ export default function Home() {
 		<section id="preview">
 			<div id="aboutPreview">
 				<div className='previewBox'>
-					<h2>About Me</h2>
+					<h2>About</h2>
 				</div>
 				<div className='about-container'>
 					<p>{aboutMe.bio_preview1}</p>
@@ -129,7 +129,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div id="contactPreview">
+			{/* <div id="contactPreview">
 				<div className='previewBox'>
 					<h2>Contact Me</h2>
 				</div>
@@ -150,7 +150,7 @@ export default function Home() {
 						<TwitterIcon aria-label="twitter" className='contactIcons' fontSize="large"/>
 					</a>
 				</div>
-			</div>
+			</div> */}
 		</section>
         </div>
 	);

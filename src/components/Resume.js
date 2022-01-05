@@ -1,13 +1,13 @@
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import ArticleIcon from '@mui/icons-material/Article';
-import resume from "../data/resume.json";
+// import FileDownloadIcon from '@mui/icons-material/FileDownload';
+// import ArticleIcon from '@mui/icons-material/Article';
+// import resume from "../data/resume.json";
 
 function Resume() {
 
     return (
         <div className="resume-div">
             <h2 className="resume-title">Resume</h2>
-            <div className="resume-content">
+            {/* <div className="resume-content">
                 <div className="resume-main-container">
                     <div className="resume-education">
                         <h2>Education</h2>
@@ -91,7 +91,7 @@ function Resume() {
                     </a>
                     <p>See More</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
