@@ -30,9 +30,9 @@ export default function NavTabs(props) {
 		} else if (clicker === 'projectsPage') {
 			handleSidebarClose();
 			handlePageChange('Projects');
-		} else if (clicker === "resumePage") {
-			handleSidebarClose();
-			handlePageChange('Resume');
+		// } else if (clicker === "resumePage") {
+		// 	handleSidebarClose();
+		// 	handlePageChange('Resume');
 		} else {
 			handleSidebarClose();
 		}
@@ -72,7 +72,7 @@ export default function NavTabs(props) {
 							About
 						</a>
 					</li>
-					<li className="navbarItem">
+					{/* <li className="navbarItem">
 						<a
 							href="#Resume"
 							onClick={() => handlePageChange('Resume')}
@@ -80,7 +80,7 @@ export default function NavTabs(props) {
 						>
 							Resume
 						</a>
-					</li>
+					</li> */}
 					<li className="navbarItem">
 						<a
 							href="#Projects"
@@ -130,7 +130,7 @@ export default function NavTabs(props) {
 							About
 						</a>
 					</li>
-					<li className="sidebarItem">
+					{/* <li className="sidebarItem">
 						<a
 							href="#Resume"
 							id="resumePage"
@@ -139,7 +139,7 @@ export default function NavTabs(props) {
 						>
 							Resume
 						</a>
-					</li>
+					</li> */}
 					<li className="sidebarItem">
 						<a
 							href="#Projects"

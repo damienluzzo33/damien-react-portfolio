@@ -41,7 +41,7 @@ main {
 
 .navbar {
   height: 80px;
-  background-color: var(--dark);
+  background-color: var(--darker-turq);
   padding: 30px;
   position: fixed;
   width: 100%;
@@ -75,7 +75,7 @@ main {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--off-white);
+  color: var(--turquoise);
   text-shadow: none;
   transition: all 0.2s ease-out;
 }
@@ -95,19 +95,21 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .asideBox .contactIcons {
   margin-top: 10px;
   height: 35px;
   color: var(--turquoise);
+  z-index: 1000;
 }
 
 /** ================= SIDEBAR ================= */
 
 .materialMenu, .materialExit {
   font-size: 3rem !important;
-  color: var(--off-white);
+  color: var(--turquoise);
   border-radius: 20px;
   margin-right: 20px;
   background-color: transparent;
@@ -620,6 +622,25 @@ main {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 450px) {
+
+  .aboutMeTitle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .aboutMeTitle h2 {
+    z-index: 2;
+    font-size: 3rem;
+    position: inherit;
+    color: var(--turquoise);
+    margin-bottom: 50px;
+    /* left: 70px; */
+    /* top: 200px; */
+  }
+}
+
 @media screen and (min-width: 950px) {
 
   #bioText {
@@ -696,7 +717,7 @@ main {
 /** ================= PROJECTS PAGE ================= */
 
 .projects {
-  padding: 20px 15px 100px 15px;
+  width: 100%;
   background: #041b33;
   background: -moz-linear-gradient(45deg,  #041b33 6%, #044762 52%, #044762 54%, #044762 63%, #041b33 100%);
   background: -webkit-linear-gradient(45deg,  #041b33 6%,#044762 52%,#044762 54%,#044762 63%,#041b33 100%);
@@ -705,12 +726,22 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+.projectTitleDiv {
+  width: 100%;
+  height: 300px;
+  background-color: var(--darker-turq);
+  margin-bottom: 50px;
 }
 
 .projects-title {
+  position: relative;
+  top: 200px;
+  left: 70px;
   font-size: 3rem;
-  margin-bottom: 50px;
-  margin-top: 120px;
   color: var(--turquoise);
 }
 
@@ -739,7 +770,7 @@ main {
   border: solid 2px var(--off-white);
   width: 100%;
   margin-top: 10px;
-  filter: grayscale(50%);
+  filter: grayscale(70%);
   transition: filter 0.5s linear;
 }
 
@@ -886,9 +917,8 @@ main {
   .projects {
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 0px 15% 100px 15%;
   }
 
   .projects-title {
@@ -897,17 +927,12 @@ main {
 
   .main-project {
     width: 100% ;
-    margin: 0 5px 10px 5px;
+    margin: 0 25px 10px 25px;
   }
   
   .sub-project {
-      width: calc(50% - 10px);
-      margin: 10px 0 0 0;
-  }
-
-  .sub-project {
-    margin-right: 5px;
-    margin-left: 5px;
+      width: calc(50% - 30px);
+      margin: 10px 5px 0 5px;
   }
 
   .sub-project .project-header {
@@ -1485,7 +1510,6 @@ footer a {
 
   .navbar {
     height: 80px;
-    background-color: var(--dark);
     padding: 15px 0 0 20px;
     position: fixed;
     width: 100%;

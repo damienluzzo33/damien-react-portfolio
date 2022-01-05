@@ -46,7 +46,9 @@ export default function Projects() {
 	
 	return (
 		<section id="projects" className="projects">
-			<h2 className="projects-title">Projects</h2>
+			<div className='projectTitleDiv'>
+				<h2 className="projects-title">Projects</h2>
+			</div>
 			<figure className="main-project">
 				<h3 className="main-project-header">{mainProject.title}</h3>
 				<div>

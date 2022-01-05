@@ -9,7 +9,7 @@ export default function About() {
 	return (
 		<section id="about" className="about">
 			<div className='aboutMeTitle'>
-				<h2>About Me</h2>
+				<h2>About</h2>
 			</div>
 			<article>
 				<div id="profilePic"></div>
