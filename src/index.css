@@ -168,11 +168,7 @@ main {
 /** ================= HOME PAGE ================= */
 
 #home {
-  background-image: url("./images/land1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: top;
+  background-color: var(--darker-turq);
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -184,20 +180,20 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 #home h2 {
-  color: var(--off-white);
-  font-size: 3.5rem;
-  margin-bottom: 5px;
+  color: var(--turquoise);
+  font-size: 5.5rem;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 #home h3 {
-  color: var(--off-white);
-  font-size: 2rem;
+  margin: 5px;
+  color: var(--turquoise);
+  font-size: 1.5rem;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
 }
@@ -205,12 +201,15 @@ main {
 #preview {
   padding: 20px 10%;
   padding-bottom: 80px;
+  background-image: url("./images/gradient\ background.png");
+  background-position: bottom;
+  background-size: cover;
 }
 
 #aboutPreview {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid rgb(114, 114, 114);
+  border-bottom: 2px solid var(--turquoise);
 }
 
 #aboutPreview p {
@@ -220,14 +219,14 @@ main {
 
 #projectsPreview {
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgb(114, 114, 114);
+  padding-bottom: 50px;
+  border-bottom: 2px solid var(--turquoise);
 }
 
 #recPreview {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid rgb(114, 114, 114);
+  border-bottom: 2px solid var(--turquoise);
 }
 
 .previewBox {
@@ -236,7 +235,8 @@ main {
 }
 
 .previewBox h2 {
-  color: var(--off-white);
+  color: var(--turquoise);
+  font-size: 30px;
   padding-bottom: 20px;
   padding-top: 10px;
 }
@@ -245,16 +245,61 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .previewBanner p {
   color: var(--off-white);
+  line-height: 22px;
+}
+
+.lets-talk {
+  background-color: var(--turquoise);
+  font-weight: 800;
+  height: 30px;
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .projectPicture {
   margin-bottom: 30px;
   width: 90%;
   margin: 5%;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-container p {
+  color: var(--off-white);
+  line-height: 22px;
+}
+
+.available-for {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.available-for div {
+  margin: 10px 10px 25px 10px;
+}
+
+.hire {
+  background-image: url('./images/available_for.PNG');
+  background-size: cover;
+  width: 150px;
+  height: 140px;
+}
+
+.teach {
+  background-image: url('./images/available_for2.PNG');
+  background-size: cover;
+  width: 150px;
+  height: 140px;
 }
 
 #gitBlogginPreview {
@@ -276,7 +321,6 @@ main {
 }
 
 .projectPicture div {
-  border: 1px solid violet;
   width: 100%;
   border-radius: 10px;
   height: 300px;
@@ -294,19 +338,28 @@ main {
   width: 100%;
   height: 50px;
   align-items: center;
-  border: 2px solid rgb(114, 114, 114);
+  font-weight: 800;
+  border: 2px solid white;
   border-radius: 10px;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
 }
 
+.projectDropdown:hover {
+  cursor: pointer;
+  box-shadow: inset 2px 2px 4px white, inset 2px -2px 4px white, inset -2px -2px 4px white, inset -2px 2px 4px white;
+  border: 1px solid white;
+  background-color: var(--turquoise);
+}
+
 .projectDropdown button {
   width: 50px;
-  color: var(--off-white);
-  background-color: transparent;
+  color: var(--darker-turq);
+  font-weight: 800;
+  background-color: white;
   border-radius: 10px;
   padding: 5px;
-  border: 2px solid rgb(114, 114, 114);
+  border: 2px solid var(--darker-turq);
 }
 
 #recPreview .previewBanner {
@@ -318,8 +371,7 @@ main {
   width: 80%;
   text-align: center;
   border-radius: 10px;
-  padding: 10px;
-  border: 2px solid rgb(114, 114, 114);
+  padding: 20px;
   margin-bottom: 10px;
 }
 
@@ -359,6 +411,53 @@ main {
 }
 
 @media screen and (min-width: 750px) {
+
+  #home {
+    justify-content: flex-start;
+    padding: 0px 0px 50px 70px;
+  }
+  
+  #home article {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .about-content .previewBanner {
+    justify-content: flex-start;
+    padding-top: 10px;
+    align-items: flex-start;
+  }
+
+  .about-container p {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .available-for {
+    flex-direction: column;
+    margin-right: 25px;
+  }
+
+  .lets-talk {
+    width: 120px;
+    margin-left: 12px;
+  }
+
+  .hire {
+    width: 180px;
+    height: 170px;
+  }
+  
+  .teach {
+    width: 180px;
+    height: 170px;
+  }
+
   .projectPicture {
     width: 100%;
     margin: 5% 0%;

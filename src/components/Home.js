@@ -49,8 +49,9 @@ export default function Home() {
 	return (<div>
 		<section id="home">
 			<article>
-				<h2>{aboutMe.name}</h2>
 				<h3>{aboutMe.title}</h3>
+				<h2>{aboutMe.name}</h2>
+				
 			</article>
 		</section>
 		<section id="preview">
@@ -58,10 +59,23 @@ export default function Home() {
 				<div className='previewBox'>
 					<h2>About Me</h2>
 				</div>
-				<div className='previewBanner'>
-					<p>{aboutMe.bio_part1}</p>
-					<p>{aboutMe.bio_part2}</p>
+				<div className='about-container'>
+					<p>{aboutMe.bio_preview1}</p>
+					<div className='about-content'>
+						<div className='previewBanner'>
+							<p>{aboutMe.bio_preview2}</p>
+							<p>{aboutMe.bio_preview3}</p>
+							<p>{aboutMe.bio_preview4}</p>
+							<button className='lets-talk'>let's talk</button>
+						</div>
+						<div className='available-for'>
+							<div className='hire'></div>
+							<div className='teach'></div>
+						</div>
+					</div>
+					
 				</div>
+				
 			</div>
 			<div id="projectsPreview">
 				<div className='previewBox'>
@@ -115,7 +129,7 @@ export default function Home() {
 			</div>
 			<div id="recPreview">
 				<div className='previewBox'>
-					<h2>Recommendations</h2>
+					<h2>Testimonials</h2>
 				</div>
 				<div className='previewBanner'>
 					<div id="rec1">
