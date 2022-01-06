@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -6,6 +7,10 @@ function validateEmail(email) {
 }
 
 export default function Contact() {
+
+	React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
 	const [ userEmail, setUserEmail ] = useState('');
 	const [ firstName, setFirstName ] = useState('');
@@ -104,7 +109,7 @@ export default function Contact() {
 			<div className='contactIntro'>
 				<p>If you are interested in hiring or collaborating on crafting amazing applications, please feel free to contact me.</p>
 			</div>
-			<button className='pdfDownload'>Portfolio PDF</button>
+			<a href="../images/Damien-Luzzo-Full-Stack-Developer-Resume.pdf" className='pdfDownload'><ArrowUpwardIcon id="arrowUp" /> Portfolio PDF</a>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
 				<div>
 					<input

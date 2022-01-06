@@ -56,34 +56,37 @@ export default function NavTabs(props) {
 							onClick={() => handlePageChange('Home')}
 							className={currentPage === 'Home' ? 'navbarLink active' : 'navbarLink'}
 						>
-							Home
+							home
 						</a>
 					</li>
+					<li className='navbarItem'><p className='navbarLink'>/</p></li>
 					<li className="navbarItem">
 						<a
 							href="#About"
 							onClick={() => handlePageChange('About')}
 							className={currentPage === 'About' ? 'navbarLink active' : 'navbarLink'}
 						>
-							About
+							about
 						</a>
 					</li>
+					<li className='navbarItem'><p className='navbarLink'>/</p></li>
 					<li className="navbarItem">
 						<a
 							href="#Projects"
 							onClick={() => handlePageChange('Projects')}
 							className={currentPage === 'Projects' ? 'navbarLink active' : 'navbarLink'}
 						>
-							Projects
+							projects
 						</a>
 					</li>
+					<li className='navbarItem'><p className='navbarLink'>/</p></li>
 					<li className="navbarItem">
 						<a
 							href="#Contact"
 							onClick={() => handlePageChange('Contact')}
 							className={currentPage === 'Contact' ? 'navbarLink active' : 'navbarLink'}
 						>
-							Contact
+							contact
 						</a>
 					</li>
 				</ul>

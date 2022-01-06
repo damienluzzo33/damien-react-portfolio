@@ -6,13 +6,17 @@ import ArticleIcon from '@mui/icons-material/Article';
 
 export default function About() {
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
 	return (
 		<section id="about" className="about">
 			<div className='aboutMeTitle'>
 				<h2>About</h2>
 			</div>
 			<article>
-				<div id="profilePic"></div>
+				{/* <div id="profilePic"></div> */}
 				<div id='bioText'>
 					<p className='profileBio'>
 						{aboutMe.bio_part1}
@@ -51,16 +55,16 @@ export default function About() {
                         </div>
                     </div>
                     <div className="resume-skills">
-                        <h2>Skills</h2>
-                        <div className="skills-tech">
-                            <h4>Tech Stack</h4>
+                        {/* <h2>Skills</h2> */}
+                        {/* <div className="skills-tech"> */}
+                            <h4>Technologies</h4>
                             <div>
                             {resume.technicalSkills.map((skill) => (
                                 <button className="skills-button" key={skill}>{skill}</button>
                             ))}
                             </div>
-                        </div>
-                        <div className="skills-dev">
+                        {/* </div> */}
+                        {/* <div className="skills-dev">
                         <h4>Hard Skills</h4>
                             <div>
                             {resume.hardSkills.map((skill) => (
@@ -75,9 +79,9 @@ export default function About() {
                                 <button className="skills-button" key={skill}>{skill}</button>
                             ))}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="resume-experience">
+                    {/* <div className="resume-experience">
                         <h2>Relevant Experience</h2>
                         <div className="job-div">
                             {resume.workExperience.map((job,i) => (
@@ -91,7 +95,7 @@ export default function About() {
                             ))}
                         </div>
                         
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="resumeLinkDiv">

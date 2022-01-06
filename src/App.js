@@ -14,7 +14,7 @@ function App() {
 
 	const render = (page) => {
 		if (page === 'Home') {
-			return <Home />;
+			return <Home currentPage={page} handlePageChange={updatePage} />;
 		} else if (page === 'About') {
 			return <About />;
 		} else if (page === 'Projects') {

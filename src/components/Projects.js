@@ -9,6 +9,10 @@ import projects from "../data/projects.json";
 
 export default function Projects() {
 
+	React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
 	const mainProject = projects[0];
 	const subProjects = projects.filter((project) => (
 		project.key !== "cactusSocial"

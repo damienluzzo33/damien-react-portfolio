@@ -3,9 +3,16 @@ import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
 import RecCarouselSideshow from "./RecCarouselSlideshow"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
-export default function Home() {
+export default function Home(props) {
+
+	React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
+	const { handlePageChange } = props;
 
 	const [open, setOpen] = React.useState(
 		{
@@ -14,6 +21,20 @@ export default function Home() {
 			project3: false
 		}
 	)
+
+	function handleNavigation(event) {
+		const clicker = event.target.id;
+		console.log(clicker);
+		if (clicker === "homePage") {
+			handlePageChange('Home');
+		} else if (clicker === "aboutPage") {
+			handlePageChange('About');
+		} else if (clicker === "contactPage") {
+			handlePageChange('Contact');
+		} else if (clicker === 'projectsPage') {
+			handlePageChange('Projects');
+		}
+	}
 
 	const handleOpen = (event) => {
 		let project = event.target.id;
@@ -60,8 +81,24 @@ export default function Home() {
 						<div className='previewBanner'>
 							<p>{aboutMe.bio_preview2}</p>
 							<p>{aboutMe.bio_preview3}</p>
+							<a
+								className='moreAboutMe'
+								id='aboutPage'
+								href="#About"
+								onClick={handleNavigation}
+							>
+								More About Me
+							</a>
 							<p>{aboutMe.bio_preview4}</p>
-							<button className='lets-talk'>let's talk</button>
+							<button 
+								className='lets-talk'
+								id="contactPage"
+								href="#Contact"
+								onClick={handleNavigation}
+							>
+								let's talk 
+								<ArrowForwardIcon id="arrowForward"/>
+							</button>
 						</div>
 						<div className='available-for'>
 							<div className='hire'></div>
@@ -112,9 +149,16 @@ export default function Home() {
 					)
 					}
 				</div>
+				<div className='seeMoreProjects'>
+					<a 
+						href="#Projects"
+					>
+						See More
+					</a>
+				</div>
 			</div>
 			<div id="recPreview">
-				<div className='previewBox'>
+				<div className='previewBox previewRec'>
 					<h2>Testimonials</h2>
 				</div>
 				<div className='previewBanner'>
