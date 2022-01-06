@@ -109,7 +109,7 @@ export default function Contact() {
 			<div className='contactIntro'>
 				<p>If you are interested in hiring or collaborating on crafting amazing applications, please feel free to contact me.</p>
 			</div>
-			<a href="../images/Damien-Luzzo-Full-Stack-Developer-Resume.pdf" className='pdfDownload'><ArrowUpwardIcon id="arrowUp" /> Portfolio PDF</a>
+			<a href="./Damien-Luzzo-Full-Stack-Resume-Public.pdf" target="_blank" rel="noreferrer" className='pdfDownload'><ArrowUpwardIcon id="arrowUp" /> Portfolio PDF</a>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
 				<div>
 					<input

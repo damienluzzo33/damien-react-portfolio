@@ -831,6 +831,8 @@ main {
   justify-content: flex-start;
   align-items: flex-end;
   padding-left: 27px;
+  filter: grayscale(90);
+  transition: filter 0.25s linear;
 }
 
 .main-project {
@@ -841,8 +843,6 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  filter: grayscale(60%);
-  transition: filter 0.5s linear;
 }
 
 .sub-project {
@@ -850,8 +850,6 @@ main {
   border: solid 2px var(--off-white);
   width: 100%;
   margin-top: 10px;
-  filter: grayscale(70%);
-  transition: filter 0.5s linear;
 }
 
 .projects figure:nth-of-type(2) {
@@ -903,22 +901,29 @@ main {
 .main-project-header {
   position: absolute;
   bottom: 160px;
-  /* left: 25px; */
   font-size: 2rem;
   font-weight: bolder;
-  color: var(--off-white);
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.602), -1px -1px 8px rgba(0, 0, 0, 0.602), 1px -1px 8px rgba(0, 0, 0, 0.602), -1px 1px 8px rgba(0, 0, 0, 0.602);
+  color: var(--turquoise);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 6px 16px 6px 16px;
+  background-color: var(--dark);
+  /* text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.602), -1px -1px 8px rgba(0, 0, 0, 0.602), 1px -1px 8px rgba(0, 0, 0, 0.602), -1px 1px 8px rgba(0, 0, 0, 0.602); */
 }
 
 .sub-project .project-header {
   position: absolute;
-  top: 25px;
+  top: 10px;
   left: 25px;
   text-align: left;
   font-size: 1.65rem;
   font-weight: bolder;
-  color: var(--off-white);
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.602), -1px -1px 6px rgba(0, 0, 0, 0.602), 1px -1px 6px rgba(0, 0, 0, 0.602), -1px 1px 6px rgba(0, 0, 0, 0.602);
+  color: var(--turquoise);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 6px 16px 6px 16px;
+  background-color: var(--dark);
+  /* text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.602), -1px -1px 6px rgba(0, 0, 0, 0.602), 1px -1px 6px rgba(0, 0, 0, 0.602), -1px 1px 6px rgba(0, 0, 0, 0.602); */
 }
 
 .projects figure div {
@@ -934,12 +939,17 @@ main {
   font-weight: bold;
   font-size: 17px;
   flex-wrap: wrap;
+  background-color: var(--dark);
+  padding: 8px 12px 8px 12px;
+  border-radius: 15px;
+  justify-content: center;
 }
 
 .project-techstack li {
   margin-right: 15px;
-  color: white;
-  text-shadow: 1px 1px 6px black, -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black;
+  color: var(--off-white);
+  font-weight: 500;
+  /* text-shadow: 1px 1px 6px black, -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black; */
   margin-bottom: 5px;
 }
 
