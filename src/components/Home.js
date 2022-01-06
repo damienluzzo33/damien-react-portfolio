@@ -1,12 +1,6 @@
 import React from 'react';
-// import EmailIcon from '@mui/icons-material/Email';
-// import ArticleIcon from '@mui/icons-material/Article';
-// import GitHubIcon from '@mui/icons-material/GitHub';
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import TwitterIcon from '@mui/icons-material/Twitter';
 import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
-// import contact from "../data/contact.json";
 import RecCarouselSideshow from "./RecCarouselSlideshow"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
@@ -129,28 +123,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			{/* <div id="contactPreview">
-				<div className='previewBox'>
-					<h2>Contact Me</h2>
-				</div>
-				<div className='previewBanner'>
-					<a href={contact.email} target="_blank" rel="noreferrer">
-						<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
-					</a>
-					<a href={contact.resume} target="_blank" rel="noreferrer">
-						<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
-					</a>
-					<a href={contact.github} target="_blank" rel="noreferrer">
-						<GitHubIcon aria-label="github" className='contactIcons' fontSize="large"/>
-					</a>
-					<a href={contact.linkedin} target="_blank" rel="noreferrer">
-						<LinkedInIcon aria-label="linkedin" className='contactIcons' fontSize="large"/>
-					</a>
-					<a href={contact.twitter} target="_blank" rel="noreferrer">
-						<TwitterIcon aria-label="twitter" className='contactIcons' fontSize="large"/>
-					</a>
-				</div>
-			</div> */}
 		</section>
         </div>
 	);

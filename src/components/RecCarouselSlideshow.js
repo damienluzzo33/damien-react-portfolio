@@ -4,8 +4,6 @@ import { Carousel } from "react-responsive-carousel";
 
 export default function RecCarouselSlideshow() {
 
-    console.log(recs);
-
     return (
         <React.Fragment>
             <div className='mainShow'>

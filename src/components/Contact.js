@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-// import EmailIcon from '@mui/icons-material/Email';
-// import ArticleIcon from '@mui/icons-material/Article';
-// import contact from "../data/contact.json";
 
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -166,13 +163,3 @@ export default function Contact() {
 		</section>
 	);
 }
-
-
-{/* <address className="contact-links">
-				<a href={contact.email} target="_blank" rel="noreferrer">
-					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
-				</a>
-				<a href={contact.resume} target="_blank" rel="noreferrer">
-					<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
-				</a>
-			</address> */}
