@@ -948,11 +948,12 @@ main {
 /** ================= CONTACT PAGE ================= */
 
 .contact {
-  padding: 20px 15px 20px 15px;
-  height: 100vh;
+  padding: 20px 0px 120px 0px;
+  /* height: 100vh; */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   background: #041b33;
   background: -moz-linear-gradient(45deg,  #041b33 6%, #044762 52%, #044762 54%, #044762 63%, #041b33 100%);
@@ -962,28 +963,38 @@ main {
   color: var(--off-white);
 }
 
+.contactTitleDiv {
+  width: 100%;
+  height: 300px;
+  background-color: var(--darker-turq);
+  margin-bottom: 50px;
+}
+
+.contactIntro {
+  margin-left: 50px;
+}
+
 .contact-title {
-  margin-top: 80px;
-  margin-bottom: 40px;
   font-size: 3rem;
   color: var(--turquoise);
+  position: relative;
+  left: 70px;
+  top: 200px;
 }
 
 #contactForm {
-  margin-bottom: 50px;
+  margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #contactForm div {
-  display: flex;
   width: 80%;
-  justify-content: center;
 }
 
-#contactForm label {
+/* #contactForm label {
   margin-right: 10px;
   align-self: center;
   margin-bottom: 10px;
@@ -991,6 +1002,17 @@ main {
 
 #contactForm div label {
   width: 80px;
+} */
+
+.pdfDownload {
+  margin-top: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 20px 10px 20px 60px;
+  border: none;
+  background-color: var(--turquoise);
+  border-bottom: 15px solid var(--darker-turq);
 }
 
 #contactForm input {
@@ -998,39 +1020,100 @@ main {
   min-height: 30px;
   margin-bottom: 10px;
   border-radius: 4px;
+  padding: 2px;
 }
 
 #contactForm textarea {
-  min-height: 60px;
+  padding: 2px;
+}
+
+#contactForm div:nth-of-type(1) input {
+  max-width: 400px;
+  margin-right: 15px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+#contactForm div:nth-of-type(3) input::placeholder {
+  color: var(--dark);
+  padding: 1px;
+}
+
+#contactForm div:nth-of-type(4) textarea::placeholder {
+  color: var(--dark);
+  padding: 1px;
+}
+
+#contactForm div:nth-of-type(2) input {
+  max-width: 400px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+  color: white;
+  margin-bottom: 25px;
+}
+
+::-webkit-input-placeholder { 
+  color: white;
+  font-size: 16px;
+  opacity: 1;
+}
+::-moz-placeholder { 
+  color: white;
+  font-size: 16px;
+  opacity: 1;
+}
+:-ms-input-placeholder { 
+  color: white;
+  font-size: 16px;
+  opacity: 1;
+}
+:-moz-placeholder { 
+  color: white;
+  font-size: 16px;
+  opacity: 1;
+}
+
+#contactForm textarea {
+  min-height: 120px;
   /* margin-right: 20px; */
   min-width: 250px;
-  min-height: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-radius: 4px;
 }
 
-@media screen and (max-width: 650px) {
-  #contactForm label {
-    display: none;
+@media screen and (min-width: 1000px) {
+  #contactForm div:nth-of-type(1) input {
+    max-width: 200px;
+  }
+
+  #contactForm div:nth-of-type(2) input {
+    max-width: 400px;
   }
 }
 
 #contactSubmit {
-  width: 90px;
-  height: 30px;
+  width: 100px;
+  height: 40px;
   font-size: 1.1rem;
   font-weight: 800;
-  background-color: var(--dark-turq);
-  border: 2px solid white;
-  color: white;
-  border-radius: 20px;
-  transition: background-color, box-shadow 0.2s ease-in-out;
+  background-color: var(--turquoise);
+  border: none;
+  color: black;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #contactSubmit:hover {
   cursor: pointer;
-  background-color: var(--turquoise);
-  box-shadow: 1px 1px 2px var(--turquoise), 1px -1px 2px var(--turquoise), -1px 1px 2px var(--turquoise), -1px -1px 2px var(--turquoise);
+  background-color: white;
+  box-shadow: 2px 2px 2px var(--turquoise), 2px -2px 2px var(--turquoise), -2px 2px 2px var(--turquoise), -2px -2px 2px var(--turquoise);
 }
 
 .contactIcons {
@@ -1046,6 +1129,7 @@ main {
 
 .errorText {
   margin-bottom: 50px;
+  margin-left: 50px;
   color: white;
   font-weight: bold;
   text-shadow: 2px 2px 2px red, -2px -2px 2px red, 2px -2px 2px red, -2px 2px 2px red;

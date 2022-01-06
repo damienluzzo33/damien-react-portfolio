@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import EmailIcon from '@mui/icons-material/Email';
-import ArticleIcon from '@mui/icons-material/Article';
-import contact from "../data/contact.json";
+// import EmailIcon from '@mui/icons-material/Email';
+// import ArticleIcon from '@mui/icons-material/Article';
+// import contact from "../data/contact.json";
 
 function validateEmail(email) {
 	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -11,7 +11,9 @@ function validateEmail(email) {
 export default function Contact() {
 
 	const [ userEmail, setUserEmail ] = useState('');
-	const [ userName, setUserName ] = useState('');
+	const [ firstName, setFirstName ] = useState('');
+	const [ lastName, setLastName ] = useState('');
+	const [ subject, setSubject ] = useState('');
 	const [ message, setMessage ] = useState('');
 	const [ errorMessage, setErrorMessage ] = useState('');
 
@@ -23,8 +25,12 @@ export default function Contact() {
 		// Based on the input type, we set the state of either email, username, and password
 		if (inputType === 'userEmail') {
 			setUserEmail(inputValue);
-		} else if (inputType === 'userName') {
-			setUserName(inputValue);
+		} else if (inputType === 'firstName') {
+			setFirstName(inputValue);
+		} else if (inputType === 'lastName') {
+			setLastName(inputValue);
+		} else if (inputType === 'subject') {
+			setSubject(inputValue);
 		} else if (inputType === 'message') {
 			setMessage(inputValue);
 		}
@@ -38,9 +44,14 @@ export default function Contact() {
 			return;
 		}
 
-		if (!userName) {
+		if (!firstName || !lastName) {
 			setErrorMessage(`You need to include your name!`);
 			return;
+		}
+
+		if (!subject) {
+			setErrorMessage("You can't leave your subject line blank!");
+            return;
 		}
 
 		if (!message) {
@@ -48,7 +59,7 @@ export default function Contact() {
             return;
 		}
 
-		if (validateEmail(userEmail) && userName && message) {
+		if (validateEmail(userEmail) && firstName && lastName && subject &&message) {
 			setErrorMessage('');
 			return;
 		}
@@ -64,9 +75,14 @@ export default function Contact() {
 			return;
 		}
 
-		if (!userName) {
+		if (!firstName || !lastName) {
 			setErrorMessage(`You need to include your name!`);
 			return;
+		}
+
+		if (!subject) {
+			setErrorMessage("You can't leave your subject line blank!");
+            return;
 		}
 
 		if (!message) {
@@ -75,29 +91,43 @@ export default function Contact() {
 		} 
 		
 
-		setUserName('');
+		setFirstName('');
+		setLastName('');
 		setUserEmail('');
+		setSubject('');
 		setMessage('');
 		setErrorMessage('');
 	};
 
 	return (
 		<section id="contact" className="contact">
-			<h2 className="contact-title">Contact</h2>
+			<div className="contactTitleDiv">
+				<h2 className="contact-title">Contact</h2>
+			</div>
+			<div className='contactIntro'>
+				<p>If you are interested in hiring or collaborating on crafting amazing applications, please feel free to contact me.</p>
+			</div>
+			<button className='pdfDownload'>Portfolio PDF</button>
 			<form id="contactForm" onSubmit={handleFormSubmit}>
 				<div>
-					<label>Name</label>
 					<input
-						value={userName}
-						name="userName"
+						value={firstName}
+						name="firstName"
 						onChange={handleInputChange}
 						type="text"
-						placeholder=" Name"
+						placeholder=" First Name"
+                        onBlur={onBlurFunction}
+					/>
+					<input
+						value={lastName}
+						name="lastName"
+						onChange={handleInputChange}
+						type="text"
+						placeholder=" Last Name"
                         onBlur={onBlurFunction}
 					/>
 				</div>
 				<div>
-					<label>Email</label>
 					<input
 						value={userEmail}
 						name="userEmail"
@@ -107,14 +137,23 @@ export default function Contact() {
                         onBlur={onBlurFunction}
 					/>
 				</div>
-				
 				<div>
-					<label>Message </label>
+					<input
+						value={subject}
+						name="subject"
+						onChange={handleInputChange}
+						type="text"
+						placeholder=" Subject Line"
+                        onBlur={onBlurFunction}
+					/>
+				</div>
+				<div>
 					<textarea
 						value={message}
 						name="message"
 						onChange={handleInputChange}
                         onBlur={onBlurFunction}
+						placeholder=' Message'
 					/>
 				</div>
 				<button id="contactSubmit" type="submit">Submit</button>
@@ -124,14 +163,16 @@ export default function Contact() {
 					<p className="errorText">{errorMessage}</p>
 				</div>
 			)}
-			<address className="contact-links">
+		</section>
+	);
+}
+
+
+{/* <address className="contact-links">
 				<a href={contact.email} target="_blank" rel="noreferrer">
 					<EmailIcon aria-label="email" className='contactIcons' fontSize="large"/>
 				</a>
 				<a href={contact.resume} target="_blank" rel="noreferrer">
 					<ArticleIcon aria-label="resume" className='contactIcons' fontSize="large"/>
 				</a>
-			</address>
-		</section>
-	);
-}
+			</address> */}
