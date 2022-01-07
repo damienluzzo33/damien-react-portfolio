@@ -1,16 +1,7 @@
-/*  CSS designed with mobile-first approach */
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Questrial&family=Quicksand:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @import url("https://use.typekit.net/pjr7lsn.css");
-
-/* font-family: 'PT Serif', serif;
-font-family: 'Questrial', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Rubik', sans-serif;
-font-family: 'Zilla Slab', serif; */
-
-/*  Create variables for webpage color scheme */
 
 :root {
   --turquoise: #4CD2FF;
@@ -30,7 +21,6 @@ font-family: 'Zilla Slab', serif; */
   font-weight: 300;
   font-style: normal;
   scroll-behavior: smooth;
-  /* letter-spacing: 1px; */
 }
 
 body {
@@ -252,14 +242,12 @@ main {
 #projectsPreview {
   margin-bottom: 20px;
   padding-bottom: 50px;
-  /* border-bottom: 2px solid var(--turquoise); */
 }
 
 #recPreview {
   margin-top: 50px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  /* border-bottom: 2px solid var(--turquoise); */
 }
 
 .previewBox {
@@ -559,7 +547,6 @@ main {
 .testimonialQuote {
   padding: 20px 25px 0px 25px;
   font-size: 18px;
-  /* margin-bottom: 10px; */
   display: flex;
   text-align: center;
   align-items: center;
@@ -908,7 +895,6 @@ main {
   border-radius: 10px;
   padding: 6px 16px 6px 16px;
   background-color: var(--dark);
-  /* text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.602), -1px -1px 8px rgba(0, 0, 0, 0.602), 1px -1px 8px rgba(0, 0, 0, 0.602), -1px 1px 8px rgba(0, 0, 0, 0.602); */
 }
 
 .sub-project .project-header {
@@ -923,7 +909,6 @@ main {
   border-radius: 10px;
   padding: 6px 16px 6px 16px;
   background-color: var(--dark);
-  /* text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.602), -1px -1px 6px rgba(0, 0, 0, 0.602), 1px -1px 6px rgba(0, 0, 0, 0.602), -1px 1px 6px rgba(0, 0, 0, 0.602); */
 }
 
 .projects figure div {
@@ -949,7 +934,6 @@ main {
   margin-right: 15px;
   color: var(--off-white);
   font-weight: 500;
-  /* text-shadow: 1px 1px 6px black, -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black; */
   margin-bottom: 5px;
 }
 
@@ -1056,11 +1040,9 @@ main {
 
 .contact {
   padding: 20px 0px 120px 0px;
-  /* height: 100vh; */
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   background: #041b33;
   background: -moz-linear-gradient(45deg,  #041b33 6%, #044762 52%, #044762 54%, #044762 63%, #041b33 100%);
@@ -1108,16 +1090,6 @@ main {
 #contactForm div {
   width: 80%;
 }
-
-/* #contactForm label {
-  margin-right: 10px;
-  align-self: center;
-  margin-bottom: 10px;
-}
-
-#contactForm div label {
-  width: 80px;
-} */
 
 .pdfDownload {
   margin-top: 30px;
@@ -1200,7 +1172,6 @@ main {
 
 #contactForm textarea {
   min-height: 120px;
-  /* margin-right: 20px; */
   min-width: 250px;
   margin-bottom: 15px;
   border-radius: 4px;
@@ -1333,7 +1304,6 @@ main {
   margin-top: 5px;
   font-size: 18px;
   border: none;
-  /* box-shadow: 2px 2px 6px var(--turquoise); */
   color: var(--off-white);
   margin-right: 5px;
   background-color: transparent;
@@ -1358,14 +1328,6 @@ main {
   font-style: normal;
 }
 
-/* .skills-tech, .skills-dev, .skills-soft {
-  box-shadow: 3px 3px 6px var(--dark);
-  border-radius: 25px;
-  background-color: var(--dark-turq);
-  margin: 10px;
-  padding: 10px;
-} */
-
 .skills-button {
   margin: 2px 2px 2px 2px;
   padding: 2px 8px 2px 8px;
@@ -1373,57 +1335,9 @@ main {
   border: none;
   background-color: transparent;
   color: white;
-  /* box-shadow: 2px 2px 2px var(--turquoise); */
-  /* text-shadow: 1px 1px 3px var(--off-white); */
   font-weight: 400;
   font-size: 18px;
 }
-
-/* .resume-experience {
-  border: 2px solid var(--dark-blue);
-  border-radius: 25px;
-  background-color: var(--darker-turq);
-  text-shadow: 2px 2px 4px var(--dark);
-  margin: 20px 5px 20px 5px;
-  padding: 15px 20px 15px 20px;
-} */
-
-/* .resume-experience h2 {
-  color: var(--turquoise);
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 24px;
-} */
-
-/* .exp-div {
-  border: 3px solid var(--dark);
-  box-shadow: 3px 3px 6px var(--dark);
-  border-radius: 25px;
-  background-color: var(--dark-turq);
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-
-} */
-
-/* .exp-div h5 {
-  color: var(--off-white);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.exp-div span {
-  color: var(--off-white);
-  margin: 2px;
-  font-size: 18px;
-}
-
-.exp-div p {
-  color: var(--off-white);
-  margin: 15px 25px 15px 25px;
-  font-size: 16px;
-} */
 
 .resumeLinkDiv {
   display: flex;
@@ -1466,22 +1380,6 @@ main {
   color: white;
   cursor: pointer;
 }
-
-/* #slide1, #slide2 {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-#slide1 {
-  width: 100%;
-  transition: width 0.3s ease-in;
-}
-
-#slide2 {
-  width: 0%;
-  transition: width 0.3s ease-in;
-} */
 
 .recDiv {
   width: 100%;
@@ -1539,7 +1437,6 @@ main {
   height: 180px;
   border-radius: 50%;
   margin: 15px;
-  /* border: 2px solid var(--light-blue); */
   box-shadow: 3px 3px 9px var(--light-blue), 3px -3px 9px var(--light-blue), -3px 3px 9px var(--light-blue), -3px -3px 9px var(--light-blue);
 }
 
