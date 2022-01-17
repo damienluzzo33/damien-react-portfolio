@@ -54,24 +54,39 @@ export default function Projects() {
 				<h2 className="projects-title">Projects</h2>
 			</div>
 			<figure className="main-project">
-				<h3 className="main-project-header">{mainProject.title}</h3>
-				<div>
-					<div className="project-links">
-						<a href={mainProject.github} rel="noopener noreferrer" target="_blank">
-							<CodeIcon className="material" fontSize="large" />
-						</a>
-						<a href={mainProject.deploy} rel="noopener noreferrer" target="_blank">
-							<LinkIcon className="material" fontSize="large" />
-						</a>
-						<div id={mainProject.key} onClick={handleOpen}>
-							<MoreHorizIcon className="material" fontSize="large" />
+				<h2>{mainProject.title}</h2>
+				<div className='main-project-img-div'>
+					<div className='main-project-img' />
+				</div>
+				<div className='main-project-details'>
+					<h3 className="main-project-header">{mainProject.title}</h3>
+					<div className='main-project-info'>
+						<div className='project-description'>
+							<p>{mainProject.text}</p>
+						</div>
+						<div>
+							<ul className='project-techstack'>
+							{mainProject.techStack.map((tech) => (
+								<li>{tech}</li>
+							))}
+							</ul>
+						</div>
+						
+						<div className="project-links">
+							<a href={mainProject.github} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit repo
+								</span>
+								<CodeIcon className="material" fontSize="large" />
+							</a>
+							<a href={mainProject.deploy} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit app
+								</span>
+								<LinkIcon className="material" fontSize="large" />
+							</a>
 						</div>
 					</div>
-					<ul className='project-techstack'>
-						{mainProject.techStack.map((tech) => (
-							<li>{tech}</li>
-						))}
-					</ul>
 				</div>
 			</figure>
 			{subProjects.map((project) => (

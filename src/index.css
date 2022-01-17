@@ -790,7 +790,7 @@ main {
   width: 100%;
   height: 300px;
   background-color: var(--darker-turq);
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .projects-title {
@@ -813,16 +813,16 @@ main {
 }
 
 .projects figure {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding-left: 27px;
-  filter: grayscale(90);
-  transition: filter 0.25s linear;
+  /* position: relative; */
+  /* display: flex; */
+  /* justify-content: flex-start; */
+  /* align-items: flex-end; */
+  /* padding-left: 27px; */
+  /* filter: grayscale(90); */
+  /* transition: filter 0.25s linear; */
 }
 
-.main-project {
+/* .main-project {
   height: 300px;
   border: solid 2px var(--off-white);
   width: 100%;
@@ -830,16 +830,128 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+} */
+
+/* .main-project-header {
+  position: absolute;
+  bottom: 160px;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--turquoise);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 6px 16px 6px 16px;
+  background-color: var(--dark);
+} */
+
+.main-project {
+  /* margin-top: 50px; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
 }
 
 .sub-project {
-  height: 200px;
-  border: solid 2px var(--off-white);
-  width: 100%;
-  margin-top: 10px;
+  border: 2px solid red;
 }
 
-.projects figure:nth-of-type(2) {
+.main-project h2 {
+  font-size: 20px;
+  color: white;
+  padding-left: 30px;
+  width: 100%;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+}
+
+.main-project-img-div {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0px;
+}
+
+.main-project-img {
+  height: 400px;
+  background-image: url("./images/cactus_social_screenshot1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.main-project-header {
+  display: none;
+}
+
+.main-project-details {
+  width: 100%;
+  display: flex;
+}
+
+.main-project-info {
+  height: 100%;
+}
+
+.project-description {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 10px 20px 0px 20px;
+  text-align: left;
+}
+
+.project-description p {
+  font-weight: 300;
+}
+
+.project-techstack {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  margin: 30px 0px;
+  color: white;
+}
+
+.project-techstack li {
+  line-height: 30px;
+  font-size: 16px;
+  padding: 0px 10px;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+}
+
+.project-links a {
+  color: var(--turquoise);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.project-links a span {
+  padding-right: 5px;
+  font-weight: 600;
+}
+
+.sub-project {
+  /* height: 200px; */
+  /* border: solid 2px var(--off-white);
+  width: 100%;
+  margin-top: 10px; */
+}
+
+/* .projects figure:nth-of-type(2) {
   background-image: url("./images/screenshot1.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -879,25 +991,13 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-}
+} */
 
-.main-project:hover, .sub-project:hover {
+/* .main-project:hover, .sub-project:hover {
   filter: grayscale(0%);
-}
+} */
 
-.main-project-header {
-  position: absolute;
-  bottom: 160px;
-  font-size: 2rem;
-  font-weight: bolder;
-  color: var(--turquoise);
-  font-weight: 700;
-  border-radius: 10px;
-  padding: 6px 16px 6px 16px;
-  background-color: var(--dark);
-}
-
-.sub-project .project-header {
+/* .sub-project .project-header {
   position: absolute;
   top: 10px;
   left: 25px;
@@ -909,15 +1009,15 @@ main {
   border-radius: 10px;
   padding: 6px 16px 6px 16px;
   background-color: var(--dark);
-}
+} */
 
-.projects figure div {
+/* .projects figure div {
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.project-techstack {
+/* .project-techstack {
   margin-right: 10px;
   display: flex;
   margin-top: 11px;
@@ -928,21 +1028,21 @@ main {
   padding: 8px 12px 8px 12px;
   border-radius: 15px;
   justify-content: center;
-}
+} */
 
-.project-techstack li {
+/* .project-techstack li {
   margin-right: 15px;
   color: var(--off-white);
   font-weight: 500;
   margin-bottom: 5px;
-}
+} */
 
-.project-links {
+/* .project-links {
   display: flex;
   flex-direction: row !important;
-}
+} */
 
-.project-links a {
+/* .project-links a {
   text-decoration: none;
   color: var(--dark);
   margin-right: 15px;
@@ -954,22 +1054,22 @@ main {
   color: var(--dark);
   margin-right: 15px;
   display: inline;
-}
+} */
 
 .material {
-  font-size: 2.5rem !important;
+  /* font-size: 2.5rem !important;
   color: var(--dark);
   box-shadow: 1px 1px 5px black, -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black;
   background-color: rgba(255, 255, 255, 0.787);
   border-radius: 50%;
-  transition: background-color, box-shadow, color 0.5s ease-in !important;
+  transition: background-color, box-shadow, color 0.5s ease-in !important; */
 }
 
 .material:hover {
-  color: var(--dark-blue);
+  /* color: var(--dark-blue);
   cursor: pointer;
   box-shadow: 2px 2px 7px var(--dark-blue), -2px -2px 7px var(--dark-blue), 2px -2px 7px var(--dark-blue), -2px 2px 7px var(--dark-blue) !important;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255); */
 }
 
 .modalDiv {
@@ -988,23 +1088,23 @@ main {
 
 @media screen and (min-width: 700px) {
 
-  .projects {
+  /* .projects {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-  }
+  } */
 
   .projects-title {
     width: 100%;
   }
 
-  .main-project {
+  /* .main-project {
     width: 100% ;
     margin: 0 80px 10px 80px;
-  }
+  } */
   
-  .sub-project:nth-of-type(even) {
+  /* .sub-project:nth-of-type(even) {
       width: calc(50% - 85px);
       margin: 10px 5px 0px 0px;
   }
@@ -1016,16 +1116,16 @@ main {
 
   .sub-project .project-header {
       left: 25px;
-  }
+  } */
 
-  .projects figure div {
+  /* .projects figure div {
       left: 25px;
       bottom: 10px;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {
-  .sub-project:nth-of-type(even) {
+  /* .sub-project:nth-of-type(even) {
     width: calc(33.3333% - 60px);
     margin: 10px 5px 0px 5px;
   }
@@ -1033,7 +1133,7 @@ main {
   .sub-project:nth-of-type(odd) {
     width: calc(33.3333% - 60px);
     margin: 10px 5px 0px 5px;
-  }
+  } */
 }
 
 /** ================= CONTACT PAGE ================= */
