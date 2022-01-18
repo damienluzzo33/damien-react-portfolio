@@ -658,18 +658,6 @@ main {
   align-items: center;
 }
 
-/* #profilePic {
-  background-image: url("./images/20181209_223633.jpg");
-  height: 500px;
-  margin-right: 20px;
-  margin-left: 20px;
-  background-position: center;
-  background-size: cover;
-  width: 75%;
-  border-radius: 15px;
-  margin-bottom: 20px;
-} */
-
 #bioText {
   margin: 30px 60px 0px 60px;
 }
@@ -803,14 +791,6 @@ main {
   font-style: normal;
 }
 
-@media screen and (max-width: 400px) {
-  .projects-title {
-    left: 0px;
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .main-project {
   margin-top: 70px;
   width: 100%;
@@ -830,7 +810,7 @@ main {
   align-items: center;
 }
 
-.main-project h2 {
+.main-project h2, .sub-project h2 {
   font-size: 20px;
   color: white;
   padding-left: 30px;
@@ -842,13 +822,7 @@ main {
 }
 
 .sub-project h2 {
-  font-size: 20px;
-  color: white;
   padding: 20px 30px 0px 30px;
-  width: 100%;
-  font-weight: 500;
-  line-height: 25px;
-  text-align: left;
 }
 
 .main-project-img-div, .sub-project-img-div {
@@ -858,14 +832,10 @@ main {
 }
 
 .main-project-img-div div {
-  height: 300px;
   background-image: url("./images/cactus_social_screenshot1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
-.sub-project-img-div div { 
+.sub-project-img-div div, .main-project-img-div div { 
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -962,50 +932,45 @@ main {
   font-weight: 600;
 }
 
-@media screen and (min-width: 500px) {
-  
-  .main-project {
-    margin-top: 50px;
-    min-height: calc(100vh - 330px);
+@media screen and (max-width: 400px) {
+  .projects-title {
+    left: 0px;
+    display: flex;
+    justify-content: center;
   }
-  
-  .sub-project {
+}
+
+@media screen and (min-width: 500px) {
+  .main-project, .sub-project {
     margin-top: 50px;
     min-height: calc(100vh - 330px);
   }
 }
 
 @media screen and (min-width: 700px) {
-
   .main-project, .sub-project {
     width: 96%;
     min-height: 30vh;
     flex-direction: row;
     align-items: center;
   }
-
   .sub-project:nth-last-of-type(even) {
     flex-direction: row-reverse;
   }
-  
   .main-project h2, .sub-project h2 {
     display: none;
   }
-  
   .main-project-img-div, .sub-project-img-div {
     width: 40%;
     height: 250px;
     margin: 10px 10px;
   }
-  
   .main-project-img-div div {
     height: 250px;
   }
-  
   .sub-project-img-div div { 
     height: 250px;
   }
-  
   .main-project-header, .sub-project-header {
     display: block;
     font-size: 20px;
@@ -1016,17 +981,14 @@ main {
     line-height: 25px;
     text-align: left;
   }
-  
   .main-project-details, .sub-project-details {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-  
   .main-project-info, .sub-project-info {
     height: 100%;
   }
-  
   .project-description {
     color: white;
     font-size: 16px;
@@ -1034,11 +996,9 @@ main {
     padding: 10px 20px 0px 20px;
     text-align: left;
   }
-  
   .project-description p {
     font-weight: 300;
   }
-  
   .project-techstack {
     width: 100%;
     height: 100%;
@@ -1046,36 +1006,20 @@ main {
     padding-right: 40px;
     color: white;
   }
-  
   .project-techstack li {
     line-height: 24px;
     font-size: 16px;
   }
-  
   .project-links {
     padding-bottom: 20px;
     justify-content: center;
   }
-  
   .project-links a {
     margin: 0px 15px;
   }
-
   .projects-title {
     width: 100%;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  /* .sub-project:nth-of-type(even) {
-    width: calc(33.3333% - 60px);
-    margin: 10px 5px 0px 5px;
-  }
-
-  .sub-project:nth-of-type(odd) {
-    width: calc(33.3333% - 60px);
-    margin: 10px 5px 0px 5px;
-  } */
 }
 
 /** ================= CONTACT PAGE ================= */
@@ -1281,7 +1225,6 @@ main {
   text-decoration: underline;
 }
 
-
 /** ================= RESUME PAGE ================= */
 
 .resume-div {
@@ -1396,136 +1339,6 @@ main {
   font-weight: 800;
 }
 
-/** ================= CAROUSEL ================= */
-
-.slides {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 10px 20px 10px;
-  height: auto;
-  border: 3px solid var(--dark);
-  box-shadow: 3px 3px 6px var(--dark);
-  border-radius: 25px;
-  background-color: var(--darker-blue);
-}
-
-.prevArrow {
-  font-size: 40px !important;
-  color: white;
-  cursor: pointer;
-}
-
-.nextArrow {
-  font-size: 40px !important;
-  color: white;
-  cursor: pointer;
-}
-
-.recDiv {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 30px;
-  margin: 5px 0 5px 0;
-  background-color: var(--dark);
-  border: 3px solid var(--light-blue);
-  box-shadow: 1px 1px 8px var(--light-blue), 2px 2px 12px var(--off-white);
-}
-
-.recProfile {
-  width: 100%;
-  height: auto;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.recProfile h3 {
-  font-size: 24px;
-  color: white;
-}
-
-.recProfile h4 {
-  margin-top: 15px;
-  font-size: 20px;
-  color: white;
-  height: 60px;
-}
-
-.recDetails {
-  width: 100%;
-  height: auto;
-  padding: 10px;
-}
-
-.recMessage {
-  font-size: 16px;
-  color: white;
-  text-align: left;
-  margin: 0px 5px 15px 5px;
-  border-top: 2px solid var(--light-blue);
-  padding-top: 20px;
-}
-
-.recImage {
-  background-position: center;
-  background-size: cover;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin: 15px;
-  box-shadow: 3px 3px 9px var(--light-blue), 3px -3px 9px var(--light-blue), -3px 3px 9px var(--light-blue), -3px -3px 9px var(--light-blue);
-}
-
-#coleImage {
-  background-image: url("./images/coleImage.png");
-}
-
-#ethanImage {
-  background-image: url("./images/ethanImage.png");
-}
-
-#christopherImage {
-  background-image: url("./images/christopherImage.png");
-}
-
-#chuckImage {
-  background-image: url("./images/chuckImage.png");
-}
-
-#christianImage {
-  background-image: url("./images/christianImage.png");
-}
-
-#natalia_hess1 {
-  background-image: url("./images/natalia_hess1.PNG");
-}
-
-.slideButtons {
-  margin-top: 10px;
-}
-
-.slideButtons button {
-  margin: 2px;
-  font-size: 20px;
-  font-weight: 800;
-  padding: 3px;
-  width: 25px;
-  border-radius: 10px;
-  background-color: var(--dark);
-  border: 2px solid var(--off-white);
-  color: white;
-}
-
-.slideButtons button:hover {
-  cursor: pointer;
-}
-
 @media screen and (min-width: 700px) {
 
   .exp-div h5 {
@@ -1535,53 +1348,7 @@ main {
 
 }
 
-@media screen and (min-width: 1100px) {
 
-  .resume-content {
-    width: 90%;
-  }
-
-  .job-div {
-    display: flex;
-  }
-
-  #slide1, #slide2 {
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .recDiv {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 10px;
-  }
-
-  .recProfile {
-    width: 100%;
-  }
-
-  .recDetails {
-    width: 100%;
-  }
-
-  .edu-box {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .main-edu {
-    width: 50%;
-  }
-
-  .secondary-edu {
-    width: 50%;
-  }
-}
 
 /** ================= FOOTER ================= */
 
