@@ -799,6 +799,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--turquoise);
 }
 
 .sub-project {
@@ -808,6 +810,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid var(--turquoise);
 }
 
 .main-project h2, .sub-project h2 {
@@ -915,7 +919,7 @@ main {
   margin-left: 5%;
   padding-bottom: 30px;
   justify-content: space-around;
-  border-bottom: 2px solid var(--turquoise);
+  /* border-bottom: 2px solid var(--turquoise); */
 }
 
 .project-links a {
@@ -942,14 +946,15 @@ main {
 
 @media screen and (min-width: 500px) {
   .main-project, .sub-project {
-    margin-top: 50px;
+    width: 96%;
+    margin-top: 30px;
     min-height: calc(100vh - 330px);
   }
 }
 
 @media screen and (min-width: 700px) {
   .main-project, .sub-project {
-    width: 96%;
+    width: 90%;
     min-height: 30vh;
     flex-direction: row;
     align-items: center;
@@ -1019,6 +1024,20 @@ main {
   }
   .projects-title {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-project-img-div, .sub-project-img-div {
+    width: 50%;
+    max-height: 100%;
+    margin: 20px 20px;
+  }
+  .main-project-img-div div {
+    height: 100%;
+  }
+  .sub-project-img-div div { 
+    height: 100%;
   }
 }
 
