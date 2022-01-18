@@ -7,7 +7,7 @@
         "deploy": "https://cactus-social.herokuapp.com/",
         "techStack": [
             "Javascript", "React", "MongoDB", "GraphQL",
-            "Express", "JWT", "Mongoose", "Apollo", "React Router", "Weavy", "MUI", "CSS"
+            "Express",  "Mongoose", "Apollo", "React Router", "Weavy", "CSS"
         ],
         "picture": ""
     },

@@ -29,8 +29,8 @@ function App() {
 	return (
 		<main>
 			<Navbar currentPage={page} handlePageChange={updatePage} />
-			<Aside />
 			{render(page)}
+			<Aside />
 			<Footer />
 		</main>
 	);
