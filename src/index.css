@@ -83,7 +83,7 @@ main {
 .asideBox {
   position: fixed;
   right: 10px;
-  top: 18vh;
+  top: 10vh;
   /* width: 60px; */
   height: auto;
   display: flex;
@@ -200,12 +200,13 @@ main {
 
 #home h2 {
   color: var(--turquoise);
-  font-size: 3.6rem;
+  font-size: 10vw;
   text-shadow: 2px 2px 3px black;
   font-family: forma-djr-display, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 #home h3 {
@@ -214,7 +215,7 @@ main {
   font-family: forma-djr-display, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 3.2vw;
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
 }
@@ -257,7 +258,7 @@ main {
 
 .previewBox h2 {
   color: var(--turquoise);
-  font-size: 36px;
+  font-size: 60px;
   padding-bottom: 40px;
   padding-top: 40px;
   font-family: forma-djr-display, sans-serif;
@@ -282,18 +283,27 @@ main {
 }
 
 .moreAboutMe {
-  color: var(--turquoise);
   text-decoration: none;
-  margin-bottom: 40px;
-  font-weight: 600;
+  background-color: var(--turquoise);
+  font-weight: 800;
+  color: black;
+  height: 30px;
+  /* margin-top: 10px; */
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
 }
 
 .lets-talk {
   background-color: var(--turquoise);
   font-weight: 800;
   height: 30px;
-  width: 75%;
-  margin-top: 10px;
+  padding: 10px 10px;
+  /* width: 75%; */
   margin-bottom: 15px;
   border-radius: 8px;
   border: none;
@@ -303,6 +313,39 @@ main {
 }
 
 .lets-talk:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px white, 2px -2px 4px white, -2px -2px 4px white, -2px 2px 4px white;
+}
+
+.seeMoreProjects {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 550px) {
+  .seeMoreProjects {
+    justify-content: right;
+  }
+}
+
+.see-more-projects {
+  background-color: var(--turquoise);
+  color: black;
+  font-weight: 800;
+  height: 30px;
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 10px 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.see-more-projects:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px white, 2px -2px 4px white, -2px -2px 4px white, -2px 2px 4px white;
 }
@@ -317,6 +360,31 @@ main {
   #aboutPreview p {
     font-size: 24px;
   }
+}
+
+.home-links {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  max-height: 40px;
+}
+
+.home-links a {
+  color: var(--turquoise);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  /* margin: 0px 10px; */
+  text-decoration: none;
+}
+
+.home-links a span {
+  padding-right: 10px;
+  font-weight: 600;
+}
+
+.home-links a img {
+  /* margin-top: 15px; */
 }
 
 .projectPicture {
@@ -363,7 +431,7 @@ main {
   margin-right: 5px;
 }
 
-#arrowForward {
+.arrowForward {
   margin-left: 5px;
   padding: 0px;
   margin-right: 0px;
@@ -385,6 +453,7 @@ main {
   background-image: url("./images/cactus_social_screenshot1.png");
   background-position: center;
   background-size: cover;
+  margin-bottom: 10px;
 }
 
 .projectPicture div {
@@ -456,7 +525,7 @@ main {
   }
 
   #home h2 {
-    font-size: 5.5rem;
+    font-size: 4.75rem;
     margin-bottom: 5px;
   }
 
@@ -509,27 +578,45 @@ main {
     margin: 5% 0%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   .projectPicture div {
-    width: 50%;
-    height: 200px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .projectPicture img {
+    max-width: 100px;
   }
   
   .projectPicture p {
-    width: 50%;
+    width: 100%;
   }
 
-  #gitBloggin {
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 467px;
+    max-height: 300px;
+  }
+
+  #gitBlogginPreview {
     background-position: top;
+    max-width: 367px;
+    max-height: 300px;
   }
   
-  #grouperApp {
+  #grouperAppPreview {
     background-position: top;
+    max-width: 367px;
+    max-height: 300px;
   }
   
-  #cactusSocial {
+  #cactusSocialPreview {
     background-position: top;
+    max-width: 367px;
+    max-height: 300px;
   }
 }
 
@@ -919,7 +1006,6 @@ main {
   margin-left: 5%;
   padding-bottom: 30px;
   justify-content: space-around;
-  /* border-bottom: 2px solid var(--turquoise); */
 }
 
 .project-links a {

@@ -1,4 +1,6 @@
 import React from 'react';
+import CodeIcon from '@mui/icons-material/Code';
+import LinkIcon from '@mui/icons-material/Link';
 import projects from "../data/projects.json";
 import aboutMe from "../data/aboutMe.json";
 import RecCarouselSideshow from "./RecCarouselSlideshow"
@@ -87,7 +89,8 @@ export default function Home(props) {
 								href="#About"
 								onClick={handleNavigation}
 							>
-								More About Me
+								more about me
+								<ArrowForwardIcon className="arrowForward"/>
 							</a>
 							<p>{aboutMe.bio_preview4}</p>
 							<button 
@@ -97,7 +100,7 @@ export default function Home(props) {
 								onClick={handleNavigation}
 							>
 								let's talk 
-								<ArrowForwardIcon id="arrowForward"/>
+								<ArrowForwardIcon className="arrowForward"/>
 							</button>
 						</div>
 						<div className='available-for'>
@@ -120,7 +123,23 @@ export default function Home(props) {
 						className='projectPicture' 
 					>
 						<div id="cactusSocialPreview" />
+						<div className="info-box">
 						<p>{projects[0].text}</p>
+						<div className="home-links">
+							<a href={projects[0].github} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit repo
+								</span>
+								<CodeIcon className="material" fontSize="large" />
+							</a>
+							<a href={projects[0].deploy} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit app
+								</span>
+								<LinkIcon className="material" fontSize="large" />
+							</a>
+						</div>
+						</div>
 						</div>
 					) : (
 						<></>
@@ -130,7 +149,23 @@ export default function Home(props) {
 					{ open.project2 ? (
 					<div className='projectPicture' >
 						<div id="grouperAppPreview" />
+						<div className="info-box">
 						<p>{projects[1].text}</p>
+						<div className="home-links">
+							<a href={projects[1].github} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit repo
+								</span>
+								<CodeIcon className="material" fontSize="large" />
+							</a>
+							<a href={projects[1].deploy} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit app
+								</span>
+								<LinkIcon className="material" fontSize="large" />
+							</a>
+						</div>
+						</div>
 					</div>
 					) : (
 						<></>
@@ -142,7 +177,23 @@ export default function Home(props) {
 						className='projectPicture'
 					>
 						<div id="gitBlogginPreview" />
+						<div className="info-box">
 						<p>{projects[2].text}</p>
+						<div className="home-links">
+							<a href={projects[2].github} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit repo
+								</span>
+								<CodeIcon className="material" fontSize="large" />
+							</a>
+							<a href={projects[2].deploy} rel="noopener noreferrer" target="_blank">
+								<span>
+									visit app
+								</span>
+								<LinkIcon className="material" fontSize="large" />
+							</a>
+						</div>
+						</div>
 					</div>
 					) : (
 						<></>
@@ -151,9 +202,13 @@ export default function Home(props) {
 				</div>
 				<div className='seeMoreProjects'>
 					<a 
+						className='see-more-projects'
+						id="projectsPage"
 						href="#Projects"
+						onClick={handleNavigation}
 					>
-						See More
+						more projects
+						<ArrowForwardIcon className="arrowForward"/>
 					</a>
 				</div>
 			</div>
