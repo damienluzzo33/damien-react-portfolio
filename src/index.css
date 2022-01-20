@@ -298,6 +298,11 @@ main {
   padding: 10px 10px;
 }
 
+.moreAboutMe:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px white, 2px -2px 4px white, -2px -2px 4px white, -2px 2px 4px white;
+}
+
 .lets-talk {
   background-color: var(--turquoise);
   font-weight: 800;
