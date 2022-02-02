@@ -83,7 +83,7 @@ export default function Projects() {
 								</a>
 								{project.deploy
 								? (
-									<a href={mainProject.deploy} rel="noopener noreferrer" target="_blank">
+									<a href={project.deploy} rel="noopener noreferrer" target="_blank">
 										<span>
 											visit app
 										</span>
