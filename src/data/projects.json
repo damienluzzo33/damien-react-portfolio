@@ -37,8 +37,8 @@
         "title": "Dynamite Recipes",
         "key": "dynamiteRecipes",
         "text": "An easy-to-use application that presents users with suggested recipes that they can cook or prepare based on the food ingredients that the user provides. User-selected ingredients are saved so their ingredients are sustained.",
-        "github": "https://github.com/damienluzzo33/Project-1",
-        "deploy": "https://damienluzzo33.github.io/Project-1/",
+        "github": "https://github.com/damienluzzo33/dynamite-recipes",
+        "deploy": "https://damienluzzo33.github.io/dynamite-recipes/",
         "techStack": [
             "Javascript", "Node", "Spoonacular", "CSS", "Materialize"
         ],
