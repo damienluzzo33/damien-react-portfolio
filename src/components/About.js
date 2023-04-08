@@ -101,13 +101,13 @@ export default function About() {
             <div className="resumeLinkDiv">
                 <div className="resumeLinkBox">
                     <a href="./Damien_Luzzo_Resume_2023_v4.pdf" target="_blank" rel="noreferrer">
-                        <FileDownloadIcon aria-label="download" className='contactIcons' fontSize="large"/>
+                        <FileDownloadIcon aria-label="download resume" className='contactIcons' fontSize="large"/>
                     </a>
                     <p>Download</p>
                 </div>
                 <div className="resumeLinkBox">
-                    <a href="https://docs.google.com/document/d/1xvewE8IoywnYsMzn7ZHutwNR-oBfAE36FZ0bYNKNujc/edit?usp=sharing" target="_blank" rel="noreferrer">
-                        <ArticleIcon aria-label="email" className='contactIcons' fontSize="large"/>
+                    <a href="https://docs.google.com/document/d/1QGNptLCUzyTrWvy3IKcSQv7Wl6pKojgsNaepFkPwmOM/edit?usp=sharing" target="_blank" rel="noreferrer">
+                        <ArticleIcon aria-label="see resume" className='contactIcons' fontSize="large"/>
                     </a>
                     <p>See More</p>
                 </div>
