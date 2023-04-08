@@ -1,9 +1,9 @@
 {
     "technicalSkills": [
-        "JavaScript", "Python", "TypeScript", "Git", "GitHub", "MongoDB", "Node.js", "Express.js", "Bash", "MySQL", "HTML5", "CSS3", "PostgreSQL", "Bootstrap", "Materialize", "React.js", "WordPress", "Visual Studio", "Google Suite", "APIs", "JSON", "jQuery", "Heroku", "Netlify", "Handlebars", "GraphQL"
+        "TypeScript", "JavaScript", "Python", "PHP", "React.js", "Vue.js", "Node.js", "Express.js", "MongoDB", "MySQL", "PostgreSQL", "HTML5", "CSS", "SASS", "Bash", "Git", "GitHub", "Laravel", "Pandas", "Bootstrap", "Visual Studio", "APIs", "JSON", "jQuery", "Heroku", "Netlify", "Handlebars", "GraphQL", "Figma", "Vite", "Jest"
     ],
     "hardSkills": [
-        "Version Control", "Debugging", "OOP", "UX/UI Design", "Optimization", "Unit Testing", "Algorithms", "Troubleshooting", "Data Structures", "Database Management", "Data Analysis", "Statistics", "Advanced Mathematics", "Business Acumen", "Research", "Problem-Solving", "Project Management", "Agile Development", "Scrum"
+        "Version Control", "Debugging", "OOP", "UX/UI Design", "Optimization", "Unit Testing", "Algorithms", "Troubleshooting", "Data Structures", "Database Management", "Data Analysis", "Statistics", "Advanced Mathematics", "Physics", "Business Acumen", "Research", "Problem-Solving", "Project Management", "Agile Development", "Scrum"
     ],
     "softSkills": [
         "Innovative", "Imaginative", "Versatile", "Creative", "Well-Organized", "Proactive", "Articulate", "Accountable", "Collaborative", "Emotionally Intelligent", "Empathetic", "Relationship Builder", "Active Listener", "Excellent Communicator", "Honest", "Transparent", "Open to Feedback", "Conflict Resolution", "Teaching/Tutoring", "Mentoring"

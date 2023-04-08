@@ -8,7 +8,7 @@ export default function RecCarouselSlideshow() {
         <React.Fragment>
             <div className='mainShow'>
                 <div className='testimonialBox'>
-                    <Carousel transitionTime="500" showStatus={false} showThumbs={false} autoPlay interval="15000" dynamicHeight={true} id="recCarouselComponent">
+                    <Carousel transitionTime="500" showStatus={false} showThumbs={false} autoPlay interval="10000" dynamicHeight={true} id="recCarouselComponent">
                         {recs.map((rec) => (
                             <div className='testimonialMain'>
                                 <div className='testimonialQuote'>
