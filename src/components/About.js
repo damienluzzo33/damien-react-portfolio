@@ -100,7 +100,7 @@ export default function About() {
             </div>
             <div className="resumeLinkDiv">
                 <div className="resumeLinkBox">
-                    <a href="./Damien-Luzzo-Full-Stack-Resume-Public.pdf" target="_blank" rel="noreferrer">
+                    <a href="./Damien_Luzzo_Resume_2023_v4.pdf" target="_blank" rel="noreferrer">
                         <FileDownloadIcon aria-label="download" className='contactIcons' fontSize="large"/>
                     </a>
                     <p>Download</p>
