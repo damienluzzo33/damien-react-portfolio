@@ -116,5 +116,3 @@ export default function About() {
 		</section>
 	);
 }
-
-// adding a comment
