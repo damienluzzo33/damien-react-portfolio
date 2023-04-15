@@ -4,10 +4,9 @@
         "key": "cactusSocial",
         "text":"An intuitive, effective, and elegant social media platform for developers that allows users to build community, communicate with their connections, and engage in direct messaging with their colleagues and friends.",
         "github": "https://github.com/cole-cochran/Cactus-Social",
-        "deploy": "https://cactus-social.herokuapp.com/",
+        "deploy": "https://cactus-social-app.herokuapp.com/",
         "techStack": [
-            "Javascript", "React", "MongoDB", "GraphQL",
-            "Express",  "Mongoose", "Apollo", "React Router", "Weavy", "CSS"
+            "Javascript", "React", "MongoDB", "GraphQL", "Express",  "Mongoose", "Apollo", "React Router", "CSS", "Socket.io"
         ],
         "picture": ""
     },
