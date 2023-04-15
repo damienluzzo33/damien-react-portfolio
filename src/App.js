@@ -10,30 +10,33 @@ import Home from './components/Home';
 import Aside from './components/Aside';
 
 function App() {
-	const [ page, setPage ] = useState('Home');
+  const [page, setPage] = useState('Home');
 
-	const render = (page) => {
-		if (page === 'Home') {
-			return <Home currentPage={page} handlePageChange={updatePage} />;
-		} else if (page === 'About') {
-			return <About />;
-		} else if (page === 'Projects') {
-			return <Projects />;
-		} else if (page === 'Contact') {
-			return <Contact />;
-		}
-	};
+  const render = (page) => {
+    switch (page) {
+      case 'Home':
+        return <Home currentPage={page} handlePageChange={updatePage} />;
+      case 'About':
+        return <About />;
+      case 'Projects':
+        return <Projects />;
+      case 'Contact':
+        return <Contact />;
+      default:
+        break;
+    }
+  };
 
-	const updatePage = (page) => setPage(page);
+  const updatePage = (page) => setPage(page);
 
-	return (
-		<main>
-			<Navbar currentPage={page} handlePageChange={updatePage} />
-			{render(page)}
-			<Aside />
-			<Footer />
-		</main>
-	);
+  return (
+    <main>
+      <Navbar currentPage={page} handlePageChange={updatePage} />
+      {render(page)}
+      <Aside />
+      <Footer />
+    </main>
+  );
 }
 
 export default App;
